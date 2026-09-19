@@ -1,5 +1,4 @@
 # Calibra — robots.txt
-# Sustituye calibra.example por tu dominio real antes de publicar.
 
 User-agent: *
 Allow: /

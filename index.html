@@ -496,6 +496,13 @@ footer{border-top:1px solid var(--line); padding-block:44px 52px; background:rgb
 'use strict';
 var reduce=false; try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
 var P=window.PAGES||{};
+/* En las paginas generadas (build-static.js) los enlaces deben ser rutas reales,
+   no hash. Se detecta por la etiqueta canonical, que solo existe en el build. */
+var STATIC=!!document.querySelector('link[rel="canonical"]');
+function linkify(h){
+  return STATIC ? h.replace(/href="#\/([^"]*)"/g, function(_,r){
+    return 'href="/'+r+(r && r.slice(-1)!=='/' ? '/' : '')+'"'; }) : h;
+}
 var app=document.getElementById('app');
 var lang='es'; try{var s=localStorage.getItem('calibra-lang'); if(s==='en'||s==='es')lang=s;}catch(e){}
 
@@ -677,7 +684,7 @@ function render(){
   window.onresize=null; window.onmousemove=null;
 
   if(route==='home'){
-    app.innerHTML=HOME;
+    app.innerHTML=linkify(HOME);
     setSeo('home',{t:'Automatización de procesos con IA para empresas',
       d:'Automatizamos el trabajo repetitivo de tu empresa con trazabilidad, SLA y datos en la UE. Diagnóstico desde 490 €, piloto en 10 días laborables.',
       h1:'Calibra', crumb:[]});
@@ -699,10 +706,10 @@ function render(){
   var notice = (lang==='en') ? '<div class="notice">This page is currently available in Spanish only. The English version is part of the next phase.</div>' : '';
   var body=(p.html||'').replace('{{FORM}}', '<div style="max-width:760px">'+FORM+'</div>');
 
-  app.innerHTML='<section class="page"><div class="wrap">'+crumb+notice+
+  app.innerHTML=linkify('<section class="page"><div class="wrap">'+crumb+notice+
     '<div class="page-head"><h1>'+p.h1+'</h1>'+(p.sub?'<p class="sub">'+p.sub+'</p>':'')+
     (p.date?'<p class="date">Publicado el '+p.date+' · revisado el 19 de septiembre de 2026</p>':'')+'</div>'+
-    '<div class="body">'+body+'</div>'+relBlock(p.rel)+ctaBand()+'</div></section>';
+    '<div class="body">'+body+'</div>'+relBlock(p.rel)+ctaBand()+'</div></section>');
 
   setSeo(route,p);
   initRoi(); initForm(); initGlass();

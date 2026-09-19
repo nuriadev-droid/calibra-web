@@ -187,7 +187,8 @@ for (const f of ['pages-core.js', 'pages-blog.js', 'pages-legal.js', 'pages-id.j
 fs.cpSync(path.join(SRC, 'marca'), path.join(OUT, 'marca'), { recursive: true });
 
 /* el script del router vive inline en index.html: lo extraemos a app.js */
-const inline = index.slice(index.lastIndexOf('<script>') + 8, index.lastIndexOf('</script>'));
+const iStart = index.lastIndexOf('<script>');
+const inline = index.slice(iStart + 8, index.indexOf('</script>', iStart));
 fs.writeFileSync(path.join(OUT, 'app.js'), inline);
 for (const route of routes) {
   const file = route === 'home' ? path.join(OUT, 'index.html') : path.join(OUT, route, 'index.html');
