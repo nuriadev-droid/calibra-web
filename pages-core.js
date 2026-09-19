@@ -261,7 +261,33 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   <a class="card" href="#/sectores/industria"><span class="k">Método construido</span><h3>Industria y fabricación</h3><p>Pedidos, albaranes, control de calidad, partes de producción y trazabilidad.</p></a>
   <a class="card" href="#/sectores/clinicas"><span class="k">En desarrollo</span><h3>Clínicas y laboratorios</h3><p>Citas, consentimientos, informes y dato de salud — con las cautelas que exige.</p></a>
 </div>
-<p class="note">Distribución y logística, agroalimentario y servicios profesionales: trabajamos en ellos, pero el descubrimiento es más largo porque no partimos de método propio. Lo decimos antes de presupuestar.</p>
+<h2>¿Y si tu sector no está aquí?</h2>
+<p>Trabajamos en cualquiera. Y no es una frase de folleto: es que <b>la automatización no se organiza por sectores, se organiza por procesos</b>, y los procesos se repiten. Una correduría de seguros, un taller mecánico y una editorial no se parecen en nada — pero las tres reciben documentos por correo, las tres persiguen a sus clientes para que envíen lo que falta y las tres montan a mano el mismo informe cada mes.</p>
+
+<h3>Los patrones que aparecen en todos los sectores</h3>
+<table class="tbl">
+<thead><tr><th>Patrón</th><th>Cómo se llama en cada sitio</th></tr></thead>
+<tbody>
+<tr><td>Entrada de documentos</td><td>facturas, albaranes, pólizas, partes de trabajo, expedientes, pedidos, presupuestos</td></tr>
+<tr><td>Reclamar lo que falta</td><td>documentación trimestral, firmas pendientes, justificantes, certificados</td></tr>
+<tr><td>Alta de un caso nuevo</td><td>alta de cliente, apertura de expediente, nueva obra, nuevo paciente, nuevo proyecto</td></tr>
+<tr><td>Cruzar dos fuentes</td><td>conciliación bancaria, cotejo de albarán y pedido, cuadre de comisiones, control de stock</td></tr>
+<tr><td>Informe recurrente</td><td>cierre mensual, parte de producción, reporte a dirección, memoria de actividad</td></tr>
+<tr><td>Atención de primer nivel</td><td>estado de un pedido, de un expediente, de una reparación, de una cita</td></tr>
+</tbody></table>
+<p>Si reconoces dos o tres de esos en tu día a día, hay trabajo que hacer — se llame como se llame tu sector.</p>
+
+<h3>Qué cambia de un sector a otro</h3>
+<p>El vocabulario, los sistemas que usáis y la normativa que os aplica. Eso es lo único que hace más largo el descubrimiento cuando entramos en un sector nuevo para nosotros, y lo decimos antes de presupuestar en lugar de cobrarte nuestra curva de aprendizaje como si fuera trabajo tuyo.</p>
+
+<h3>Dónde no entramos</h3>
+<ul class="tick">
+<li><b>Control de proceso industrial</b>: PLC, seguridad de máquina y todo lo que dependa de certificaciones que no tenemos. Trabajamos en la capa administrativa y documental.</li>
+<li><b>Decisión clínica.</b> Lo administrativo de una clínica, sí. Cualquier cosa que influya en un diagnóstico, no — salvo que el proyecto se plantee desde el principio con el marco regulatorio encima de la mesa.</li>
+<li><b>Asesoramiento regulado.</b> La máquina prepara, ordena y detecta anomalías; el profesional colegiado decide y firma. Nunca al revés.</li>
+</ul>
+
+<div class="callout"><b>La forma barata de averiguarlo</b> es el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a>: 490 €, tres días laborables y un solo proceso. Si sale que no merece la pena automatizarlo todavía, eso es exactamente lo que dirá el informe.</div>
 `
 },
 
