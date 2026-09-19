@@ -83,9 +83,9 @@ P['faq'] = {
 /* ---------- HOME ---------- */
 var HOME =
 '<section class="hero"><canvas id="field" aria-hidden="true"></canvas><div class="wrap"><div class="hero-grid"><div>' +
-'<span class="pill"><i class="led"></i><span>Automatización de procesos con IA</span></span>' +
+'<span class="pill"><i class="led"></i><span>Agencia de inteligencia artificial</span></span>' +
 '<h1>Automatizamos el trabajo que tu equipo <span class="grad">repite cada día</span>.</h1>' +
-'<p class="hero-lead">Con trazabilidad, con SLA por escrito y con los datos en Europa. Empezamos por un diagnóstico de precio cerrado: sales con el mapa de tus procesos y una cifra, contrates o no el desarrollo.</p>' +
+'<p class="hero-lead">Somos una agencia de IA: construimos <b>chatbots</b>, agentes de inteligencia artificial y automatizaciones de procesos. Con trazabilidad, con SLA por escrito y con los datos en Europa. Empezamos por un diagnóstico de precio cerrado: sales con el mapa de tus procesos y una cifra, contrates o no el desarrollo.</p>' +
 '<div class="hero-cta"><a class="btn btn-pri" href="#/contacto">Reservar diagnóstico</a><a class="btn btn-sec" href="#/precios">Ver precios y calculadora</a></div>' +
 '<p class="hero-note">Desde 490 € y tres días para un proceso suelto. El importe se descuenta íntegro si contratas la implantación en los 60 días siguientes.</p>' +
 '<div class="strip"><span><i></i><span>Datos en la UE</span></span><span><i></i><span>Sin lock-in</span></span>' +
@@ -111,12 +111,12 @@ var HOME =
 '</div></section>' +
 
 '<section><div class="wrap"><div class="sec-head"><span class="lab">Qué hacemos</span>' +
-'<h2>Cinco formas de <span class="grad">quitarle horas</span> a tu equipo</h2></div>' +
+'<h2>Lo que hace una <span class="grad">agencia de IA</span> cuando trabaja en serio</h2></div>' +
 '<div class="cards">' +
 '<a class="card" href="#/servicios/auditoria-ia"><span class="k">Empieza aquí</span><h3>Diagnóstico y auditoría</h3><p>Desde 490 € y tres días. Medimos antes de construir.</p></a>' +
 '<a class="card" href="#/servicios/automatizacion-procesos"><span class="k">Servicio</span><h3>Automatización de procesos</h3><p>Los saltos manuales entre tus sistemas, con gestión de errores.</p></a>' +
 '<a class="card" href="#/servicios/documentos-facturas"><span class="k">Servicio</span><h3>Documentos y facturación</h3><p>Facturas leídas, validadas y registradas sin tecleo.</p></a>' +
-'<a class="card" href="#/servicios/agentes-ia"><span class="k">Servicio</span><h3>Agentes de IA</h3><p>Atención conectada a tus datos, con escalado a persona.</p></a>' +
+'<a class="card" href="#/servicios/agentes-ia"><span class="k">Servicio</span><h3>Chatbots y agentes de IA</h3><p>Chatbot en tu web, en WhatsApp o por teléfono, conectado a tus datos y con escalado a persona.</p></a>' +
 '<a class="card" href="#/servicios/integracion-erp-crm"><span class="k">Servicio</span><h3>Integración ERP y CRM</h3><p>Sage, A3, Holded, Odoo, Dynamics. Donde se va el esfuerzo real.</p></a>' +
 '<a class="card" href="#/sectores"><span class="k">Por sector</span><h3>Tu sector</h3><p>Asesorías, seguros, industria y laboratorios, con procesos concretos.</p></a>' +
 '</div></div></section>' +

@@ -77,7 +77,7 @@ function jsonLd(route, p) {
   const g = [{
     '@type': 'ProfessionalService', '@id': DOMAIN + '/#org', name: 'Calibra',
     url: DOMAIN + '/', email: 'info@calibraautomation.com', areaServed: 'ES',
-    description: 'Automatización de procesos con IA para empresas: auditoría de precio cerrado, implantación y operación con SLA, datos en la UE.',
+    description: 'Agencia de inteligencia artificial en España: chatbots, agentes de IA y automatización de procesos. Auditoría de precio cerrado, implantación y operación con SLA, datos en la UE.',
     priceRange: '490-40000 EUR'
   }];
   if (p.type === 'article') {
@@ -112,7 +112,7 @@ function jsonLd(route, p) {
 function page(route, p, bodyHtml) {
   const depth = route === 'home' ? 0 : route.split('/').length;
   const rel = depth === 0 ? '' : '../'.repeat(depth);
-  const title = route === 'home' ? 'Calibra — Automatización de procesos con IA' : `${p.t} | Calibra`;
+  const title = route === 'home' ? 'Calibra — Agencia de IA: chatbots y automatización de procesos' : `${p.t} | Calibra`;
   return `<!doctype html>
 <html lang="es">
 <head>
@@ -158,8 +158,8 @@ for (const route of routes) {
   let bodyHtml, p;
   if (route === 'home') {
     p = {
-      t: 'Automatización de procesos con IA para empresas',
-      d: 'Automatizamos el trabajo repetitivo de tu empresa con trazabilidad, SLA y los datos en la UE. Diagnóstico desde 490 €, piloto en 10 días laborables.',
+      t: 'Agencia de IA: chatbots y automatización de procesos',
+      d: 'Agencia de IA en España: chatbots, agentes de inteligencia artificial y automatización de procesos, con trazabilidad, SLA y datos en la UE. Diagnóstico desde 490 €.',
       h1: 'Calibra', crumb: []
     };
     bodyHtml = fixLinks(HOME);

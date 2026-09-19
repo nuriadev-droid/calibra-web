@@ -1,6 +1,7 @@
 # Calibra
 
-> Automatización de procesos con IA para empresas españolas. Diagnóstico exprés
+> Agencia de inteligencia artificial en España: chatbots, agentes de IA y
+> automatización de procesos para empresas. Diagnóstico exprés
 > desde 490 €, auditoría de precio cerrado en 8 días laborables, piloto en
 > producción en 10, implantación en 4-8 semanas y operación con SLA. Datos
 > alojados en la Unión Europea, sin dependencia del proveedor y con las
@@ -22,7 +23,7 @@ Contacto: info@calibraautomation.com
 - [Auditoría de automatización](/servicios/auditoria-ia/): diagnóstico de precio cerrado con mapa de procesos y priorización por retorno
 - [Automatización de procesos](/servicios/automatizacion-procesos/): los saltos manuales entre sistemas, con gestión de errores y trazabilidad
 - [Documentos y facturación](/servicios/documentos-facturas/): extracción, validación y registro de facturas y albaranes
-- [Agentes de IA](/servicios/agentes-ia/): atención por WhatsApp, correo y teléfono conectada a datos propios
+- [Chatbots y agentes de IA](/servicios/agentes-ia/): chatbot en web o WhatsApp, agentes de voz por teléfono, conectados a datos propios
 - [Integración con ERP y CRM](/servicios/integracion-erp-crm/): Sage, A3, Holded, Odoo, Dynamics, HubSpot
 
 ## Sectores

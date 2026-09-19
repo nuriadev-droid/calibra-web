@@ -23,8 +23,8 @@ window.PAGES = Object.assign(window.PAGES || {}, {
     <p>Facturas, albaranes, pedidos y contratos leídos, validados y registrados sin que nadie teclee.</p>
   </a>
   <a class="card" href="#/servicios/agentes-ia">
-    <span class="k">03</span><h3>Agentes de IA</h3>
-    <p>Atención por WhatsApp, correo o teléfono, conectada a tus datos y con escalado a persona.</p>
+    <span class="k">03</span><h3>Chatbots y agentes de IA</h3>
+    <p>Chatbot en tu web o en WhatsApp, agentes de voz por teléfono, conectados a tus datos y con escalado a persona.</p>
   </a>
   <a class="card" href="#/servicios/integracion-erp-crm">
     <span class="k">04</span><h3>Integración con ERP y CRM</h3>
@@ -168,14 +168,34 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 },
 
 'servicios/agentes-ia': {
-  t: 'Agentes de IA para empresas: WhatsApp, correo y teléfono',
-  d: 'Desarrollo de agentes de IA conectados a tus datos, con escalado a persona, trazabilidad y declaración conforme al artículo 50 del AI Act.',
-  h1: 'Agentes de IA',
-  sub: 'Atención automatizada que sabe de tu empresa, sabe cuándo callarse y sabe a quién pasarle la conversación.',
+  t: 'Chatbots y agentes de IA para empresas | WhatsApp, web y teléfono',
+  d: 'Desarrollo de chatbots y agentes de IA para empresas: web, WhatsApp y teléfono. Conectados a tus datos, con escalado a persona, trazabilidad y conformes al artículo 50 del AI Act.',
+  h1: 'Chatbots y agentes de IA',
+  sub: 'Un chatbot que sabe de tu empresa, sabe cuándo callarse y sabe a quién pasarle la conversación.',
   crumb: [['Servicios', 'servicios']],
   rel: ['blog/agentes-ia-vs-automatizacion-determinista', 'confianza/ai-act', 'precios'],
   html: `
 <p class="lead">Un agente de IA útil no es un chatbot con mejor redacción. Es un sistema que consulta tus datos reales, ejecuta acciones en tus sistemas, sabe reconocer cuándo no sabe y deja rastro de todo lo que hizo. Los tres primeros son ingeniería; el cuarto es lo que te salva en una auditoría.</p>
+
+<h2>Chatbot, asistente o agente: no es lo mismo</h2>
+<p>Los tres términos se usan como sinónimos y no lo son. La diferencia importa porque cambia el precio, el plazo y lo que puedes esperar.</p>
+<table class="tbl">
+<thead><tr><th>Qué es</th><th>Qué hace</th><th>Precio orientativo</th></tr></thead>
+<tbody>
+<tr><td><b>Chatbot de preguntas frecuentes</b></td><td>Responde con lo que hay en tus documentos y cita la fuente. No toca tus sistemas.</td><td>1.900 – 3.500 €</td></tr>
+<tr><td><b>Chatbot con acciones</b></td><td>Además consulta el estado de un pedido, agenda una cita o crea una ficha en el CRM.</td><td>3.500 – 8.000 €</td></tr>
+<tr><td><b>Agente de voz</b></td><td>Atiende el teléfono, conversa y ejecuta la gestión. Se cobra además por minuto.</td><td>desde 3.500 € + consumo</td></tr>
+<tr><td><b>Agente interno</b></td><td>Responde a tu propio equipo sobre procedimientos, convenios o normativa interna.</td><td>3.500 – 9.000 €</td></tr>
+</tbody></table>
+<p>Casi todo el mundo pide lo tercero y necesita lo primero. Empezar por un chatbot de preguntas frecuentes bien hecho, medir cuántas conversaciones resuelve de verdad y crecer desde ahí es más barato y sale mejor que montar el agente completo de entrada.</p>
+
+<h2>Dónde ponemos el chatbot</h2>
+<ul class="tick">
+<li><b>En tu web</b>, como ventana de chat. Es lo más rápido de poner en producción.</li>
+<li><b>En WhatsApp</b>, con la API oficial de WhatsApp Business. Es donde está tu cliente en España.</li>
+<li><b>Por teléfono</b>, como agente de voz que atiende llamadas y recoge o resuelve la gestión.</li>
+<li><b>Dentro de tu equipo</b>, en Slack, Teams o en una intranet.</li>
+</ul>
 
 <h2>Dónde funcionan bien</h2>
 <ul class="tick">
