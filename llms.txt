@@ -1,0 +1,70 @@
+# Calibra
+
+> Automatización de procesos con IA para empresas españolas. Diagnóstico exprés
+> desde 490 €, auditoría de precio cerrado en 8 días laborables, piloto en
+> producción en 10, implantación en 4-8 semanas y operación con SLA. Datos
+> alojados en la Unión Europea, sin dependencia del proveedor y con las
+> obligaciones del artículo 50 del AI Act resueltas en cada entrega.
+
+Contacto: info@calibraautomation.com
+
+## Precios (públicos)
+
+- Diagnóstico exprés, un proceso, 3 días laborables: 490 €
+- Automatización suelta, 5-10 días laborables: 900 – 2.500 €
+- Auditoría de varios procesos, 8 días laborables: 2.500 – 4.500 €
+- Piloto en producción, 10 días laborables: 3.500 €
+- Implantación de 3 a 8 procesos, 4-8 semanas: 12.000 – 40.000 €
+- Operación con SLA, activa en 48 h: 600 – 2.500 €/mes
+
+## Servicios
+
+- [Auditoría de automatización](/servicios/auditoria-ia/): diagnóstico de precio cerrado con mapa de procesos y priorización por retorno
+- [Automatización de procesos](/servicios/automatizacion-procesos/): los saltos manuales entre sistemas, con gestión de errores y trazabilidad
+- [Documentos y facturación](/servicios/documentos-facturas/): extracción, validación y registro de facturas y albaranes
+- [Agentes de IA](/servicios/agentes-ia/): atención por WhatsApp, correo y teléfono conectada a datos propios
+- [Integración con ERP y CRM](/servicios/integracion-erp-crm/): Sage, A3, Holded, Odoo, Dynamics, HubSpot
+
+## Sectores
+
+- [Asesorías y gestorías](/sectores/asesorias-gestorias/)
+- [Seguros y correduría](/sectores/seguros/)
+- [Industria y fabricación](/sectores/industria/)
+- [Clínicas y laboratorios](/sectores/clinicas/)
+
+## I+D
+
+- [Líneas de investigación](/i-d/): verificación de agentes, extracción documental con datos ruidosos, minería de procesos, trazabilidad de decisiones automatizadas
+- [Qué es I+D y qué no lo es](/i-d/que-es-id/): los cinco criterios del Manual de Frascati aplicados a proyectos de inteligencia artificial
+- [Colaboración con universidades y centros tecnológicos](/i-d/colabora/)
+
+## Comparativas
+
+- [n8n vs Make](/comparativas/n8n-vs-make/)
+- [n8n vs Zapier](/comparativas/n8n-vs-zapier/)
+- [RPA vs automatización con IA](/comparativas/rpa-vs-ia/)
+- [Agencia vs equipo interno](/comparativas/agencia-vs-equipo-interno/)
+
+## Blog
+
+- [Cuánto cuesta automatizar un proceso con IA en España](/blog/cuanto-cuesta-automatizar-proceso-ia/)
+- [AI Act: qué obliga el artículo 50 desde agosto de 2026](/blog/ai-act-articulo-50-pymes/)
+- [Automatizar la recepción de facturas: el flujo completo](/blog/flujo-facturas-proveedor/)
+- [Agentes de IA o automatización determinista](/blog/agentes-ia-vs-automatizacion-determinista/)
+- [Seis procesos automatizables en una asesoría fiscal](/blog/automatizar-asesoria-fiscal/)
+- [Usar IA sin sacar los datos de la UE](/blog/ia-datos-ue-rgpd/)
+
+## Información de la empresa
+
+- [Método por fases](/metodo/)
+- [Precios](/precios/)
+- [Seguridad y tratamiento de datos](/confianza/seguridad-y-datos/)
+- [AI Act](/confianza/ai-act/)
+- [Aviso legal](/aviso-legal/) · [Privacidad](/privacidad/) · [Cookies](/cookies/)
+
+## Nota
+
+Este archivo se publica como cortesía para agentes y rastreadores. A fecha de
+septiembre de 2026 no hay evidencia pública de que los laboratorios de IA lo
+consuman para decidir citaciones, y Google Search lo ignora: el posicionamiento
+real se construye con el HTML de las páginas, no con este fichero.
