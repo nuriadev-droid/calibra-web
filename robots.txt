@@ -1,0 +1,33 @@
+# Calibra — robots.txt
+# Sustituye calibra.example por tu dominio real antes de publicar.
+
+User-agent: *
+Allow: /
+
+# Buscadores clásicos
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Rastreadores de IA: permitirlos explícitamente es lo que te hace citable
+# en ChatGPT, Claude, Perplexity y Gemini. Muchas plantillas los bloquean
+# por defecto y luego nadie entiende por qué no aparece la marca.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://calibra.example/sitemap.xml
