@@ -190,12 +190,15 @@ fs.cpSync(path.join(SRC, 'marca'), path.join(OUT, 'marca'), { recursive: true })
 const iStart = index.lastIndexOf('<script>');
 const inline = index.slice(iStart + 8, index.indexOf('</script>', iStart));
 fs.writeFileSync(path.join(OUT, 'app.js'), inline);
+const stamp = require('crypto').createHash('sha1')
+  .update(inline + fs.readFileSync(path.join(SRC, 'consent.js'))).digest('hex').slice(0, 8);
 for (const route of routes) {
   const file = route === 'home' ? path.join(OUT, 'index.html') : path.join(OUT, route, 'index.html');
   let html = fs.readFileSync(file, 'utf8');
   const depth = route === 'home' ? 0 : route.split('/').length;
   const rel = depth === 0 ? '' : '../'.repeat(depth);
-  html = html.replace(/<script>[\s\S]*?<\/script>/, `<script src="${rel}app.js"></script>`);
+  html = html.replace(/<script>[\s\S]*?<\/script>/, `<script src="${rel}app.js?v=${stamp}"></script>`);
+  html = html.replace('consent.js"', `consent.js?v=${stamp}"`);
   fs.writeFileSync(file, html);
 }
 

@@ -732,7 +732,10 @@ document.querySelectorAll('.menu button.top').forEach(function(b){
 });
 document.addEventListener('click',function(ev){ if(!ev.target.closest('.menu')) closeMenus(); });
 document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') closeMenus(); });
-document.getElementById('burger').onclick=function(){document.getElementById('drawer').classList.add('open');};
+document.getElementById('burger').onclick=function(ev){
+  ev.stopPropagation();
+  document.getElementById('drawer').classList.add('open');
+};
 document.getElementById('dclose').onclick=closeMenus;
 document.getElementById('drawer').addEventListener('click',function(ev){ if(ev.target.tagName==='A') closeMenus(); });
 
