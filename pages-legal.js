@@ -66,11 +66,11 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   t: 'Política de privacidad',
   d: 'Cómo se tratan los datos personales en calibraautomation.com: responsable, finalidades, bases jurídicas, plazos, destinatarios y derechos conforme al RGPD.',
   h1: 'Política de privacidad',
-  sub: 'Última actualización: 19 de septiembre de 2026',
+  sub: 'Última actualización: 23 de septiembre de 2026',
   crumb: [],
   rel: ['cookies', 'aviso-legal', 'confianza/seguridad-y-datos'],
   html: `
-<p class="lead">Este sitio trata datos personales únicamente para responder a las solicitudes que se envían por el formulario de contacto y, si lo consientes, para medir el uso del sitio. No se venden ni ceden datos a terceros con fines comerciales, y no se utilizan para entrenar modelos de inteligencia artificial.</p>
+<p class="lead">Este sitio trata datos personales únicamente para responder a las solicitudes que se envían por el formulario de contacto y, si lo consientes, para medir el uso del sitio e identificar la empresa desde la que se visita. No se venden ni ceden datos a terceros con fines comerciales, y no se utilizan para entrenar modelos de inteligencia artificial.</p>
 
 <h2>1. Responsable del tratamiento</h2>
 <table class="tbl">
@@ -108,10 +108,10 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   <td>6 años (Código de Comercio) y 4 años (Ley General Tributaria) desde el fin de la relación</td>
 </tr>
 <tr>
-  <td><b>Analítica web</b></td>
-  <td>Datos de navegación agregados, identificador de cookie</td>
-  <td>Entender qué contenidos son útiles y mejorar el sitio</td>
-  <td>Consentimiento (art. 6.1.a RGPD)</td>
+  <td><b>Analítica web e identificación de la empresa visitante</b></td>
+  <td>Datos de navegación, identificador anónimo del navegador, dirección IP y, a partir de ella, la organización desde la que se navega</td>
+  <td>Entender qué contenidos son útiles y saber qué empresas visitan el sitio para orientar la actividad comercial de Calibra. No se identifica a personas concretas</td>
+  <td>Consentimiento (art. 6.1.a RGPD), revocable en cualquier momento desde el pie del sitio</td>
   <td>Según la <a href="#/cookies">política de cookies</a>; máximo 24 meses</td>
 </tr>
 <tr>
@@ -131,13 +131,14 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 <li><b>Alojamiento del sitio web</b> y del correo electrónico profesional</li>
 <li><b>Envío de correo electrónico</b> transaccional y, en su caso, de comunicaciones solicitadas</li>
 <li><b>Reserva de reuniones</b> y gestión de agenda</li>
-<li><b>Medición de uso del sitio</b>, únicamente si has consentido las cookies analíticas</li>
+<li><b>Medición de uso del sitio e identificación de la empresa visitante</b>: Apollo.io (Apollo Technologies Inc., Estados Unidos), únicamente si has consentido las cookies analíticas</li>
 <li><b>Asesoría fiscal y contable</b>, para el cumplimiento de obligaciones legales cuando existe relación contractual</li>
 </ul>
 <p>Conforme al artículo 13.1.e) del RGPD se informa de las categorías de destinatarios. <b>Puedes solicitar la relación nominativa y actualizada de encargados, con su ubicación, escribiendo a info@calibraautomation.com.</b> Fuera de estos supuestos, no se ceden datos a terceros, salvo obligación legal.</p>
 
 <h2>4. Transferencias internacionales</h2>
 <p>La prioridad del titular es que los datos permanezcan alojados en la Unión Europea. Si algún proveedor implicase transferencia de datos fuera del Espacio Económico Europeo, se realizará amparada en alguno de los mecanismos previstos en el capítulo V del RGPD: decisión de adecuación de la Comisión Europea, cláusulas contractuales tipo o garantías equivalentes, con la correspondiente evaluación de impacto de la transferencia. Los proveedores concretos y su ubicación se indican en el apartado anterior.</p>
+<p>En la actualidad el único proveedor que implica una transferencia fuera del EEE es <b>Apollo.io</b> (Estados Unidos), utilizado exclusivamente para identificar la empresa visitante y solo si has consentido las cookies analíticas. La transferencia se ampara en los mecanismos del capítulo V del RGPD indicados.</p>
 
 <h2>5. Tus derechos</h2>
 <p>Puedes ejercer en cualquier momento los siguientes derechos escribiendo a <b>info@calibraautomation.com</b>, indicando el derecho que ejercitas y acompañando copia de un documento que acredite tu identidad:</p>
@@ -172,7 +173,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   t: 'Política de cookies',
   d: 'Qué cookies utiliza calibraautomation.com, para qué sirven, cuánto duran y cómo configurarlas o retirar el consentimiento en cualquier momento.',
   h1: 'Política de cookies',
-  sub: 'Última actualización: 19 de septiembre de 2026',
+  sub: 'Última actualización: 23 de septiembre de 2026',
   crumb: [],
   rel: ['privacidad', 'aviso-legal', 'contacto'],
   html: `
@@ -193,16 +194,19 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 </tbody></table>
 
 <h3>Analíticas</h3>
-<p>Permiten medir de forma agregada cómo se usa el sitio para mejorar los contenidos. <b>Requieren tu consentimiento</b> y no se cargan si no lo das.</p>
+<p>Permiten medir cómo se usa el sitio e identificar la empresa u organización desde la que se navega (no a la persona), para orientar la actividad comercial de Calibra. <b>Requieren tu consentimiento</b> y no se cargan si no lo das.</p>
 <table class="tbl">
 <thead><tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr></thead>
 <tbody>
-<tr><td>[Completar cuando actives la analítica]</td><td>Tercero</td><td>Medición estadística del uso del sitio</td><td>[Completar]</td></tr>
+<tr><td><code>apolloAnonId</code></td><td>Tercero · Apollo.io · almacenamiento local</td><td>Identificador anónimo del navegador que permite reconocer visitas sucesivas y asociarlas a la empresa desde la que se navega</td><td>Persistente, hasta que retiras el consentimiento o borras los datos del navegador</td></tr>
+<tr><td><code>[id]_canTrack</code></td><td>Tercero · Apollo.io · almacenamiento local</td><td>Recuerda si el proveedor puede procesar la visita</td><td>24 horas</td></tr>
+<tr><td><code>[id]_eventQueue</code></td><td>Tercero · Apollo.io · almacenamiento local</td><td>Cola de eventos de navegación pendientes de envío al proveedor</td><td>Hasta su envío</td></tr>
+<tr><td><code>liveIntentData</code></td><td>Tercero · LiveIntent (componente cargado por Apollo.io) · almacenamiento local</td><td>Datos de resolución de identidad que Apollo.io utiliza para identificar la empresa visitante; puede emplear identificadores compartidos con otros sitios</td><td>24 horas</td></tr>
 </tbody></table>
-<div class="callout"><b>A día de hoy este sitio no tiene analítica activa.</b> Cuando se active, esta tabla debe recoger el nombre exacto de cada cookie, el tercero que la instala, su finalidad, su duración y si implica transferencia internacional. Una tabla genérica no cumple.</div>
+<div class="callout"><b>Proveedor:</b> Apollo.io (Apollo Technologies Inc., Estados Unidos). El script se descarga de assets.apollo.io y los datos se envían a aplo-evnt.com. Implica una <b>transferencia internacional a Estados Unidos</b>, amparada en los mecanismos del capítulo V del RGPD. Se activa únicamente si aceptas las cookies analíticas; si las rechazas o retiras el consentimiento, no se carga y se eliminan los datos que hubiera guardado en tu navegador.</div>
 
 <h3>De preferencias y publicitarias</h3>
-<p>Este sitio <b>no utiliza</b> cookies publicitarias, de seguimiento entre sitios ni de redes sociales. Si en el futuro se incorporasen, se añadirían a esta política y a las categorías del panel de configuración antes de activarse.</p>
+<p>Este sitio <b>no utiliza</b> cookies publicitarias ni de redes sociales. Si en el futuro se incorporasen, se añadirían a esta política y a las categorías del panel de configuración antes de activarse.</p>
 
 <h2>3. Cómo se te pide el consentimiento</h2>
 <ul class="tick">
