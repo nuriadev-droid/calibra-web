@@ -609,6 +609,8 @@ function initForm(){
     g('out').textContent='Solicitud de diagnóstico\n\n'+body;
     g('mailto').href='mailto:info@calibraautomation.com?subject='+encodeURIComponent('Solicitud de diagnóstico')+'&body='+encodeURIComponent(body);
     g('mailto').hidden=true;
+    g('copy').hidden=true;
+    g('out').hidden=true;
 
     var btn=g('f-submit'), original=btn?btn.textContent:'';
     if(btn){btn.disabled=true; btn.textContent='Enviando…';}
@@ -619,9 +621,11 @@ function initForm(){
     fd.append('replyto',mail);
     fd.append('message',body);
 
-    function showResult(msg,showMailto){
+    function showResult(msg,showFallback){
       g('result-msg').textContent=msg;
-      g('mailto').hidden=!showMailto;
+      g('mailto').hidden=!showFallback;
+      g('copy').hidden=!showFallback;
+      g('out').hidden=!showFallback;
       g('result').hidden=false;
       g('result').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
       if(btn){btn.disabled=false; btn.textContent=original;}

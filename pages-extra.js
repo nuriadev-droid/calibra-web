@@ -16,7 +16,7 @@ var FORM = '<form class="form" id="form" novalidate>' +
 '<option>Documentos y facturación</option><option>Atención al cliente</option><option>Ventas y captación</option>' +
 '<option>Back-office y administración</option><option>Informes y datos</option><option>Todavía no lo sé</option></select></div>' +
 '<div class="full"><label for="f-msg">El proceso, en dos frases</label><textarea id="f-msg" placeholder="Ej.: recibimos unas 300 facturas de proveedor al mes por correo y una persona las mete a mano en Sage."></textarea></div>' +
-'<div class="full"><button class="btn btn-pri" type="submit" id="f-submit">Preparar solicitud</button></div></form>' +
+'<div class="full"><button class="btn btn-pri" type="submit" id="f-submit">Enviar solicitud</button></div></form>' +
 '<div class="result" id="result" hidden><div class="bar"><p id="result-msg">Listo. Copia este mensaje o ábrelo en tu correo.</p>' +
 '<button class="btn btn-sec" id="copy" type="button">Copiar</button>' +
 '<a class="btn btn-pri" id="mailto" href="#">Abrir en el correo</a></div><pre id="out"></pre></div>';
