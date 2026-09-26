@@ -601,14 +601,44 @@ function initForm(){
     ev.preventDefault();
     var g=function(i){return document.getElementById(i);};
     if(!g('f-name').value.trim()||!g('f-mail').value.trim()){g(!g('f-name').value.trim()?'f-name':'f-mail').focus();return;}
-    var body='Nombre: '+g('f-name').value.trim()+'\nEmail: '+g('f-mail').value.trim()+
+    var name=g('f-name').value.trim(), mail=g('f-mail').value.trim();
+    var body='Nombre: '+name+'\nEmail: '+mail+
       '\nTamaño: '+g('f-size').options[g('f-size').selectedIndex].text+
       '\nÁrea: '+g('f-what').options[g('f-what').selectedIndex].text+
       '\n\nProceso:\n'+(g('f-msg').value.trim()||'—')+'\n\n— Enviado desde la web de Calibra';
     g('out').textContent='Solicitud de diagnóstico\n\n'+body;
-    g('mailto').href='mailto:hola@calibra.es?subject='+encodeURIComponent('Solicitud de diagnóstico')+'&body='+encodeURIComponent(body);
-    g('result').hidden=false;
-    g('result').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+    g('mailto').href='mailto:info@calibraautomation.com?subject='+encodeURIComponent('Solicitud de diagnóstico')+'&body='+encodeURIComponent(body);
+    g('mailto').hidden=true;
+
+    var btn=g('f-submit'), original=btn?btn.textContent:'';
+    if(btn){btn.disabled=true; btn.textContent='Enviando…';}
+
+    var fd=new FormData(f);
+    fd.append('subject','Solicitud de diagnóstico — '+name);
+    fd.append('from_name',name);
+    fd.append('replyto',mail);
+    fd.append('message',body);
+
+    function showResult(msg,showMailto){
+      g('result-msg').textContent=msg;
+      g('mailto').hidden=!showMailto;
+      g('result').hidden=false;
+      g('result').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+      if(btn){btn.disabled=false; btn.textContent=original;}
+    }
+
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
+      .then(function(r){return r.json();})
+      .then(function(json){
+        if(json && json.success){
+          showResult('Solicitud enviada. Te responderemos el mismo día laborable.',false);
+        } else {
+          showResult('No hemos podido enviarlo automáticamente. Copia el mensaje o ábrelo en tu correo.',true);
+        }
+      })
+      .catch(function(){
+        showResult('No hemos podido enviarlo automáticamente. Copia el mensaje o ábrelo en tu correo.',true);
+      });
   };
   var c=document.getElementById('copy');
   if(c) c.onclick=function(){var b=this,o=b.textContent;

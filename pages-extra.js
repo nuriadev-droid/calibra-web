@@ -6,6 +6,8 @@ var P = window.PAGES = window.PAGES || {};
 
 /* ---------- fragmentos reutilizables ---------- */
 var FORM = '<form class="form" id="form" novalidate>' +
+'<input type="hidden" name="access_key" value="45efbbbc-6a64-4c8d-9a2a-cfa96accb69e">' +
+'<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">' +
 '<div><label for="f-name">Nombre</label><input id="f-name" required></div>' +
 '<div><label for="f-mail">Email corporativo</label><input id="f-mail" type="email" required></div>' +
 '<div><label for="f-size">Tamaño de la empresa</label><select id="f-size">' +
@@ -14,8 +16,8 @@ var FORM = '<form class="form" id="form" novalidate>' +
 '<option>Documentos y facturación</option><option>Atención al cliente</option><option>Ventas y captación</option>' +
 '<option>Back-office y administración</option><option>Informes y datos</option><option>Todavía no lo sé</option></select></div>' +
 '<div class="full"><label for="f-msg">El proceso, en dos frases</label><textarea id="f-msg" placeholder="Ej.: recibimos unas 300 facturas de proveedor al mes por correo y una persona las mete a mano en Sage."></textarea></div>' +
-'<div class="full"><button class="btn btn-pri" type="submit">Preparar solicitud</button></div></form>' +
-'<div class="result" id="result" hidden><div class="bar"><p>Listo. Copia este mensaje o ábrelo en tu correo.</p>' +
+'<div class="full"><button class="btn btn-pri" type="submit" id="f-submit">Preparar solicitud</button></div></form>' +
+'<div class="result" id="result" hidden><div class="bar"><p id="result-msg">Listo. Copia este mensaje o ábrelo en tu correo.</p>' +
 '<button class="btn btn-sec" id="copy" type="button">Copiar</button>' +
 '<a class="btn btn-pri" id="mailto" href="#">Abrir en el correo</a></div><pre id="out"></pre></div>';
 
