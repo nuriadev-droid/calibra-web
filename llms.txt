@@ -2,21 +2,12 @@
 
 > Agencia de inteligencia artificial en España: chatbots, agentes de IA y
 > automatización de procesos para empresas. Diagnóstico exprés
-> desde 490 €, auditoría de precio cerrado en 8 días laborables, piloto en
+> en 3 días, auditoría de precio cerrado en 8 días laborables, piloto en
 > producción en 10, implantación en 4-8 semanas y operación con SLA. Datos
 > alojados en la Unión Europea, sin dependencia del proveedor y con las
 > obligaciones del artículo 50 del AI Act resueltas en cada entrega.
 
 Contacto: info@calibraautomation.com
-
-## Precios (públicos)
-
-- Diagnóstico exprés, un proceso, 3 días laborables: 490 €
-- Automatización suelta, 5-10 días laborables: 900 – 2.500 €
-- Auditoría de varios procesos, 8 días laborables: 2.500 – 4.500 €
-- Piloto en producción, 10 días laborables: 3.500 €
-- Implantación de 3 a 8 procesos, 4-8 semanas: 12.000 – 40.000 €
-- Operación con SLA, activa en 48 h: 600 – 2.500 €/mes
 
 ## Servicios
 
@@ -58,7 +49,6 @@ Contacto: info@calibraautomation.com
 ## Información de la empresa
 
 - [Método por fases](/metodo/)
-- [Precios](/precios/)
 - [Seguridad y tratamiento de datos](/confianza/seguridad-y-datos/)
 - [AI Act](/confianza/ai-act/)
 - [Aviso legal](/aviso-legal/) · [Privacidad](/privacidad/) · [Cookies](/cookies/)

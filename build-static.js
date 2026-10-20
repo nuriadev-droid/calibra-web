@@ -64,9 +64,9 @@ function relHtml(list) {
 const ctaHtml = () =>
   '<div class="band"><span class="lab">Siguiente paso</span>' +
   '<h2 style="margin-top:12px">¿Hablamos de tu proceso?</h2>' +
-  '<p>Diagnóstico exprés desde 490 € y tres días laborables. Respondemos el mismo día.</p>' +
+  '<p>Diagnóstico exprés en tres días laborables. Respondemos el mismo día.</p>' +
   '<div class="hero-cta"><a class="btn btn-pri" href="/contacto/">Escríbenos</a>' +
-  '<a class="btn btn-sec" href="/precios/">Ver precios</a></div></div>';
+  '<a class="btn btn-sec" href="/servicios/">Ver servicios</a></div></div>';
 
 /* rutas internas: de #/x (SPA) a /x/ (estático) */
 const fixLinks = html => html
@@ -77,8 +77,7 @@ function jsonLd(route, p) {
   const g = [{
     '@type': 'ProfessionalService', '@id': DOMAIN + '/#org', name: 'Calibra',
     url: DOMAIN + '/', email: 'info@calibraautomation.com', areaServed: 'ES',
-    description: 'Agencia de inteligencia artificial en España: chatbots, agentes de IA y automatización de procesos. Auditoría de precio cerrado, implantación y operación con SLA, datos en la UE.',
-    priceRange: '490-40000 EUR'
+    description: 'Agencia de inteligencia artificial en España: chatbots, agentes de IA y automatización de procesos. Auditoría de precio cerrado, implantación y operación con SLA, datos en la UE.'
   }];
   if (p.type === 'article') {
     g.push({
@@ -159,7 +158,7 @@ for (const route of routes) {
   if (route === 'home') {
     p = {
       t: 'Agencia de IA: chatbots y automatización de procesos',
-      d: 'Agencia de IA en España: chatbots, agentes de inteligencia artificial y automatización de procesos, con trazabilidad, SLA y datos en la UE. Diagnóstico desde 490 €.',
+      d: 'Agencia de IA en España: chatbots, agentes de inteligencia artificial y automatización de procesos, con trazabilidad, SLA y datos en la UE. Diagnóstico exprés en tres días.',
       h1: 'Calibra', crumb: []
     };
     bodyHtml = fixLinks(HOME);

@@ -16,7 +16,7 @@ ROI, formulario, consentimiento de cookies). El contenido vive aparte:
 | `pages-blog.js` | Artículos del blog |
 | `pages-id.js` | Sección de I+D |
 | `pages-legal.js` | Aviso legal, privacidad, cookies |
-| `pages-extra.js` | Precios, FAQ y portada, más los fragmentos reutilizables |
+| `pages-extra.js` | FAQ y portada, más los fragmentos reutilizables |
 | `consent.js` | Gestor de cookies conforme a la guía de la AEPD |
 | `build-static.js` | Generador: convierte todo en HTML reales, uno por ruta |
 | `marca/` | Logotipo e isotipo en SVG y PNG |

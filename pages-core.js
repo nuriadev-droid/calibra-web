@@ -7,11 +7,11 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 
 'servicios': {
   t: 'Servicios de automatización con IA para empresas',
-  d: 'Automatización de procesos, agentes de IA, tratamiento de documentos e integración con ERP y CRM. Precios públicos y plazos cerrados.',
+  d: 'Automatización de procesos, agentes de IA, tratamiento de documentos e integración con ERP y CRM. Precio cerrado y plazos comprometidos.',
   h1: 'Servicios',
   sub: 'Cuatro formas de quitarle a tu equipo el trabajo que repite. Todas empiezan por medir y todas terminan con alguien que responde de que siga funcionando.',
   crumb: [],
-  rel: ['precios', 'metodo', 'servicios/auditoria-ia'],
+  rel: ['metodo', 'servicios/auditoria-ia'],
   html: `
 <div class="cards">
   <a class="card" href="#/servicios/automatizacion-procesos">
@@ -33,19 +33,19 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 </div>
 
 <h2>Y antes de todo eso</h2>
-<p>Ningún servicio arranca sin un diagnóstico. Para un proceso suelto, el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a> de 490 € y tres días. Para varios, la auditoría completa en ocho días laborables.</p>
+<p>Ningún servicio arranca sin un diagnóstico. Para un proceso suelto, el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a> en tres días. Para varios, la auditoría completa en ocho días laborables.</p>
 `
 },
 
 'servicios/auditoria-ia': {
   t: 'Auditoría de automatización con IA | Precio cerrado, 8 días',
-  d: 'Auditoría de procesos con IA en ocho días laborables: mapa de procesos, horas y euros recuperables, evaluación de RGPD y AI Act, plan a seis meses. Desde 490 €.',
+  d: 'Auditoría de procesos con IA en ocho días laborables: mapa de procesos, horas y euros recuperables, evaluación de RGPD y AI Act, plan a seis meses. Precio cerrado.',
   h1: 'Auditoría de automatización',
   sub: 'Ocho días laborables. Precio cerrado. Sales con un documento tuyo, contrates o no el desarrollo.',
   crumb: [['Servicios', 'servicios']],
-  rel: ['metodo', 'precios', 'confianza/ai-act'],
+  rel: ['metodo', 'confianza/ai-act'],
   html: `
-<p class="lead">Una auditoría de automatización cuesta entre 490 € (un solo proceso, tres días) y 4.500 € (empresa completa, ocho días laborables). En España casi todas las agencias la regalan en forma de llamada de 45 minutos; esto es otra cosa.</p>
+<p class="lead">Una auditoría de automatización dura entre tres días (un solo proceso) y ocho días laborables (empresa completa), con precio cerrado antes de empezar. En España casi todas las agencias la regalan en forma de llamada de 45 minutos; esto es otra cosa.</p>
 
 <h2>Qué incluye</h2>
 <ul class="tick">
@@ -82,13 +82,13 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 
 'servicios/automatizacion-procesos': {
   t: 'Automatización de procesos con IA para empresas',
-  d: 'Automatizamos los saltos manuales entre tus sistemas: correo, ERP, CRM, hojas de cálculo. Con gestión de errores, trazabilidad y SLA. Precios desde 900 €.',
+  d: 'Automatizamos los saltos manuales entre tus sistemas: correo, ERP, CRM, hojas de cálculo. Con gestión de errores, trazabilidad y SLA.',
   h1: 'Automatización de procesos',
   sub: 'El trabajo que no aparece en ningún organigrama y se come media plantilla: copiar, pegar, comprobar, reenviar.',
   crumb: [['Servicios', 'servicios']],
-  rel: ['servicios/integracion-erp-crm', 'comparativas/rpa-vs-ia', 'precios'],
+  rel: ['servicios/integracion-erp-crm', 'comparativas/rpa-vs-ia'],
   html: `
-<p class="lead">Un flujo de automatización sencillo en España cuesta entre 900 y 2.500 € y se monta en días. Uno complejo, con varios sistemas y reglas de negocio, entre 2.500 y 8.000 €. Lo que decide el precio no es la IA: es cuántos sistemas hay que tocar y en qué estado están los datos.</p>
+<p class="lead">Un flujo de automatización sencillo se monta en días. Uno complejo, con varios sistemas y reglas de negocio, lleva unas semanas. Lo que decide el precio no es la IA: es cuántos sistemas hay que tocar y en qué estado están los datos.</p>
 
 <h2>Los procesos que más se repiten</h2>
 <table class="tbl">
@@ -118,7 +118,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 <h2>Preguntas</h2>
 <details><summary>¿Hace falta IA para esto?</summary><p>A menudo no. Muchos de estos procesos son deterministas y se resuelven mejor sin modelo: más barato, más rápido y sin alucinaciones. El modelo entra donde hay texto libre, documentos o decisiones difusas. Te lo diremos sin adornos.</p></details>
 <details><summary>¿Y si cambiamos de ERP dentro de un año?</summary><p>Por eso los flujos se construyen con la integración aislada en su propia capa. Cambiar de ERP significa rehacer esa capa, no el proceso entero.</p></details>
-<details><summary>¿Podemos empezar por uno solo?</summary><p>Es lo que recomendamos. <a href="#/servicios/auditoria-ia">Diagnóstico exprés</a> de un proceso, 490 €, y si sale a cuenta se monta.</p></details>
+<details><summary>¿Podemos empezar por uno solo?</summary><p>Es lo que recomendamos. <a href="#/servicios/auditoria-ia">Diagnóstico exprés</a> de un proceso y, si sale a cuenta, se monta.</p></details>
 </div>
 `
 },
@@ -173,19 +173,19 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Chatbots y agentes de IA',
   sub: 'Un chatbot que sabe de tu empresa, sabe cuándo callarse y sabe a quién pasarle la conversación.',
   crumb: [['Servicios', 'servicios']],
-  rel: ['blog/agentes-ia-vs-automatizacion-determinista', 'confianza/ai-act', 'precios'],
+  rel: ['blog/agentes-ia-vs-automatizacion-determinista', 'confianza/ai-act'],
   html: `
 <p class="lead">Un agente de IA útil no es un chatbot con mejor redacción. Es un sistema que consulta tus datos reales, ejecuta acciones en tus sistemas, sabe reconocer cuándo no sabe y deja rastro de todo lo que hizo. Los tres primeros son ingeniería; el cuarto es lo que te salva en una auditoría.</p>
 
 <h2>Chatbot, asistente o agente: no es lo mismo</h2>
 <p>Los tres términos se usan como sinónimos y no lo son. La diferencia importa porque cambia el precio, el plazo y lo que puedes esperar.</p>
 <table class="tbl">
-<thead><tr><th>Qué es</th><th>Qué hace</th><th>Precio orientativo</th></tr></thead>
+<thead><tr><th>Qué es</th><th>Qué hace</th></tr></thead>
 <tbody>
-<tr><td><b>Chatbot de preguntas frecuentes</b></td><td>Responde con lo que hay en tus documentos y cita la fuente. No toca tus sistemas.</td><td>1.900 – 3.500 €</td></tr>
-<tr><td><b>Chatbot con acciones</b></td><td>Además consulta el estado de un pedido, agenda una cita o crea una ficha en el CRM.</td><td>3.500 – 8.000 €</td></tr>
-<tr><td><b>Agente de voz</b></td><td>Atiende el teléfono, conversa y ejecuta la gestión. Se cobra además por minuto.</td><td>desde 3.500 € + consumo</td></tr>
-<tr><td><b>Agente interno</b></td><td>Responde a tu propio equipo sobre procedimientos, convenios o normativa interna.</td><td>3.500 – 9.000 €</td></tr>
+<tr><td><b>Chatbot de preguntas frecuentes</b></td><td>Responde con lo que hay en tus documentos y cita la fuente. No toca tus sistemas.</td></tr>
+<tr><td><b>Chatbot con acciones</b></td><td>Además consulta el estado de un pedido, agenda una cita o crea una ficha en el CRM.</td></tr>
+<tr><td><b>Agente de voz</b></td><td>Atiende el teléfono, conversa y ejecuta la gestión. Se cobra además por minuto de consumo.</td></tr>
+<tr><td><b>Agente interno</b></td><td>Responde a tu propio equipo sobre procedimientos, convenios o normativa interna.</td></tr>
 </tbody></table>
 <p>Casi todo el mundo pide lo tercero y necesita lo primero. Empezar por un chatbot de preguntas frecuentes bien hecho, medir cuántas conversaciones resuelve de verdad y crecer desde ahí es más barato y sale mejor que montar el agente completo de entrada.</p>
 
@@ -224,7 +224,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 <div class="faq">
 <h2>Preguntas</h2>
 <details><summary>¿Y si el agente se inventa una respuesta?</summary><p>Por eso la capa de recuperación cita la fuente y por eso hay barreras y umbral de derivación. Un agente que responde solo con lo que encuentra en tus documentos y que dice "no lo sé, te paso con una persona" cuando no encuentra nada es mucho más útil que uno que siempre tiene respuesta.</p></details>
-<details><summary>¿Cuánto cuesta mantenerlo?</summary><p>El consumo de modelo en un agente de atención con volumen medio suele ir de 40 a 300 € al mes. La operación con SLA, de 600 a 2.500 €. <a href="#/precios">Precios completos</a>.</p></details>
+<details><summary>¿Cuánto cuesta mantenerlo?</summary><p>El consumo de modelo en un agente de atención con volumen medio suele ir de 40 a 300 € al mes. La operación con SLA se presupuesta según el volumen y los tiempos de respuesta que necesites. <a href="#/contacto">Pide presupuesto</a>.</p></details>
 <details><summary>¿Podemos empezar solo con WhatsApp?</summary><p>Sí, y suele ser lo sensato. Un canal, un caso de uso, diez días laborables.</p></details>
 </div>
 `
@@ -307,7 +307,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 <li><b>Asesoramiento regulado.</b> La máquina prepara, ordena y detecta anomalías; el profesional colegiado decide y firma. Nunca al revés.</li>
 </ul>
 
-<div class="callout"><b>La forma barata de averiguarlo</b> es el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a>: 490 €, tres días laborables y un solo proceso. Si sale que no merece la pena automatizarlo todavía, eso es exactamente lo que dirá el informe.</div>
+<div class="callout"><b>La forma barata de averiguarlo</b> es el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a>: tres días laborables y un solo proceso. Si sale que no merece la pena automatizarlo todavía, eso es exactamente lo que dirá el informe.</div>
 `
 },
 
@@ -339,7 +339,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
 <div class="callout"><b>Verifactu.</b> Tus clientes van a venir preguntando. Una asesoría que llega con una respuesta montada —y con el proceso de facturación de sus clientes ya ordenado— convierte una obligación normativa en un servicio facturable.</div>
 
 <h2>Por dónde empezar</h2>
-<p>Por el registro de facturas de un solo cliente grande. Es el proceso con volumen más predecible, el retorno más fácil de medir y el menor riesgo si algo falla. <a href="#/servicios/auditoria-ia">Diagnóstico exprés</a>: 490 €, tres días.</p>
+<p>Por el registro de facturas de un solo cliente grande. Es el proceso con volumen más predecible, el retorno más fácil de medir y el menor riesgo si algo falla. <a href="#/servicios/auditoria-ia">Diagnóstico exprés</a>: tres días.</p>
 `
 },
 
@@ -375,7 +375,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Industria y fabricación',
   sub: 'Donde la administración va en papel aunque la planta esté digitalizada.',
   crumb: [['Sectores', 'sectores']],
-  rel: ['servicios/documentos-facturas', 'servicios/integracion-erp-crm', 'precios'],
+  rel: ['servicios/documentos-facturas', 'servicios/integracion-erp-crm'],
   html: `
 <p class="lead">En muchas industrias españolas conviven un ERP moderno y un flujo administrativo de 1998: pedidos que llegan por correo en PDF, albaranes que se teclean, partes de producción en papel que alguien pasa a una hoja el viernes. La planta no es el cuello de botella; la oficina sí.</p>
 
@@ -432,7 +432,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Comparativas',
   sub: 'Escritas para que puedas decidir tú, incluso si la decisión es no contratarnos.',
   crumb: [],
-  rel: ['servicios/automatizacion-procesos', 'precios', 'blog'],
+  rel: ['servicios/automatizacion-procesos', 'blog'],
   html: `
 <div class="cards">
   <a class="card" href="#/comparativas/n8n-vs-make"><span class="k">Herramientas</span><h3>n8n vs Make</h3><p>Cuál elegir según volumen, criticidad y dónde deben vivir los datos.</p></a>
@@ -517,7 +517,6 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   rel: ['blog/agentes-ia-vs-automatizacion-determinista', 'servicios/automatizacion-procesos', 'metodo'],
   html: `
 <p class="lead">Una automatización determinista hace siempre lo mismo ante la misma entrada, cuesta menos y no alucina. Un modelo de lenguaje entiende texto que ninguna regla podría cubrir, pero introduce variabilidad. El 70 % de los procesos de una pyme se resuelven mejor sin modelo, y decirlo en voz alta nos ha costado más de un proyecto.</p>
-
 <table class="tbl">
 <thead><tr><th></th><th>Determinista / RPA</th><th>Con modelo de lenguaje</th></tr></thead>
 <tbody>
@@ -543,14 +542,14 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Agencia vs equipo interno',
   sub: 'Te damos los números aunque la conclusión sea que no nos contrates.',
   crumb: [['Comparativas', 'comparativas']],
-  rel: ['precios', 'metodo', 'contacto'],
+  rel: ['metodo', 'contacto'],
   html: `
-<p class="lead">Un perfil senior de automatización en España cuesta entre 45.000 y 70.000 € anuales cargados, más entre dos y cuatro meses de búsqueda. Un contrato de operación con SLA va de 7.200 a 30.000 € al año. El punto de corte está en torno a ocho o diez procesos en producción.</p>
+<p class="lead">Un perfil senior de automatización en España cuesta entre 45.000 y 70.000 € anuales cargados, más entre dos y cuatro meses de búsqueda. Un contrato de operación con SLA cuesta una fracción de eso y se ajusta al volumen. El punto de corte está en torno a ocho o diez procesos en producción.</p>
 
 <table class="tbl">
 <thead><tr><th></th><th>Equipo interno</th><th>Agencia con SLA</th><th>Freelance</th></tr></thead>
 <tbody>
-<tr><td>Coste anual</td><td>45.000-70.000 € cargados</td><td>7.200-30.000 €</td><td>Variable, 280-600 €/día</td></tr>
+<tr><td>Coste anual</td><td>45.000-70.000 € cargados</td><td>Según volumen y SLA</td><td>Variable, 280-600 €/día</td></tr>
 <tr><td>Tiempo hasta productivo</td><td>3-6 meses</td><td>Días</td><td>Días</td></tr>
 <tr><td>Conocimiento del negocio</td><td>El mejor, a medio plazo</td><td>Medio, documentado</td><td>Depende de la persona</td></tr>
 <tr><td>Si esa persona se va</td><td>Se para todo</td><td>Continuidad contractual</td><td>Se para todo</td></tr>
@@ -585,7 +584,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Método',
   sub: 'Cuatro fases. Cada una se puede parar. Ninguna empieza antes de que la anterior haya entregado algo utilizable.',
   crumb: [],
-  rel: ['servicios/auditoria-ia', 'precios', 'comparativas/agencia-vs-equipo-interno'],
+  rel: ['servicios/auditoria-ia', 'comparativas/agencia-vs-equipo-interno'],
   html: `
 <ol class="steps-n big">
   <li><b>Auditoría — 8 días laborables.</b> Entrevistas, medición y un informe con procesos priorizados por retorno y riesgo. Precio cerrado. El importe se descuenta si sigues. <a href="#/servicios/auditoria-ia">Detalle</a>.</li>
@@ -715,7 +714,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Kit Digital y ayudas',
   sub: 'Lo que se puede financiar, lo que no, y lo que ya no existe aunque siga saliendo en Google.',
   crumb: [],
-  rel: ['precios', 'servicios/auditoria-ia', 'contacto'],
+  rel: ['servicios/auditoria-ia', 'contacto'],
   html: `
 <p class="lead">Dos avisos antes de nada. Kit Consulting —el programa de asesoramiento con bonos de 12.000 a 24.000 €— tuvo una única convocatoria entre mayo de 2024 y febrero de 2025 y no hay convocatoria abierta. Kit Digital sí sigue financiando soluciones de digitalización, incluidas categorías donde encajan automatizaciones con IA.</p>
 
@@ -750,7 +749,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Contacto',
   sub: 'Respondemos el mismo día laborable con una primera lectura del caso.',
   crumb: [],
-  rel: ['precios', 'servicios/auditoria-ia', 'metodo'],
+  rel: ['servicios/auditoria-ia', 'metodo'],
   html: '{{FORM}}'
 }
 
