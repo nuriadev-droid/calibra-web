@@ -8,7 +8,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   h1: 'Blog',
   sub: 'Lo que hemos aprendido montando esto, con números y sin promesas redondas.',
   crumb: [],
-  rel: ['comparativas', 'servicios', 'precios'],
+  rel: ['comparativas', 'servicios'],
   html: `
 <div class="posts">
   <a class="post" href="#/blog/cuanto-cuesta-automatizar-proceso-ia">
@@ -53,7 +53,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   crumb: [['Blog', 'blog']],
   date: '19 de septiembre de 2026',
   type: 'article',
-  rel: ['precios', 'comparativas/agencia-vs-equipo-interno', 'servicios/auditoria-ia'],
+  rel: ['comparativas/agencia-vs-equipo-interno', 'servicios/auditoria-ia'],
   html: `
 <p class="lead">En septiembre de 2026, automatizar un proceso administrativo en una pyme española cuesta entre 250 € (un flujo de dos o tres pasos) y 12.000 € (back-office documental completo con IA). El mantenimiento va de 90 a 500 € al mes. Estas cifras están publicadas por las propias agencias, no estimadas.</p>
 
@@ -95,7 +95,7 @@ window.PAGES = Object.assign(window.PAGES || {}, {
   <li>Pide ver un sistema suyo en producción, no una demo</li>
 </ul>
 
-<div class="callout">Nuestros precios están publicados en <a href="#/precios">la página de precios</a>, con plazos y con lo que incluye cada tramo.</div>
+<div class="callout">¿Quieres saber cuánto costaría en tu caso? <a href="#/contacto">Cuéntanos tu proceso</a> y te enviamos un presupuesto cerrado.</div>
 `
 },
 
