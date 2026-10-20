@@ -400,7 +400,6 @@ footer{border-top:1px solid var(--line); padding-block:44px 52px; background:rgb
         </div>
       </div>
       <div><a class="top" href="#/metodo">Método</a></div>
-      <div><a class="top" href="#/precios">Precios</a></div>
       <div><a class="top" href="#/casos">Casos</a></div>
     </nav>
     <div class="lang" role="group" aria-label="Idioma"><button id="es" aria-pressed="true">ES</button><button id="en" aria-pressed="false">EN</button></div>
@@ -435,7 +434,6 @@ footer{border-top:1px solid var(--line); padding-block:44px 52px; background:rgb
     <a href="#/i-d/colabora">Colabora</a>
     <h4>Empresa</h4>
     <a href="#/metodo">Método</a>
-    <a href="#/precios">Precios</a>
     <a href="#/casos">Casos</a>
     <a href="#/contacto">Contacto</a>
   </div>
@@ -696,9 +694,9 @@ function relBlock(list){
 function ctaBand(){
   return '<div class="band"><span class="lab">Siguiente paso</span>' +
     '<h2 style="margin-top:12px">¿Hablamos de tu proceso?</h2>' +
-    '<p>Diagnóstico exprés desde 490 € y tres días laborables. Respondemos el mismo día.</p>' +
+    '<p>Diagnóstico exprés en tres días laborables. Respondemos el mismo día.</p>' +
     '<div class="hero-cta"><a class="btn btn-pri" href="#/contacto">Escríbenos</a>' +
-    '<a class="btn btn-sec" href="#/precios">Ver precios</a></div></div>';
+    '<a class="btn btn-sec" href="#/servicios">Ver servicios</a></div></div>';
 }
 
 /* Ruta desde el hash (modo SPA) o desde la URL real (modo estático generado
@@ -720,7 +718,7 @@ function render(){
   if(route==='home'){
     app.innerHTML=linkify(HOME);
     setSeo('home',{t:'Automatización de procesos con IA para empresas',
-      d:'Automatizamos el trabajo repetitivo de tu empresa con trazabilidad, SLA y datos en la UE. Diagnóstico desde 490 €, piloto en 10 días laborables.',
+      d:'Automatizamos el trabajo repetitivo de tu empresa con trazabilidad, SLA y datos en la UE. Diagnóstico exprés en tres días, piloto en 10 días laborables.',
       h1:'Calibra', crumb:[]});
     initField(); initPipe(); initMq(); initRoi(); initForm(); initGlass();
     markActive('home'); window.scrollTo(0,0); onScroll(); return;
@@ -729,7 +727,7 @@ function render(){
   var p=P[route];
   if(!p){
     app.innerHTML='<section class="page"><div class="wrap"><div class="page-head"><h1>Página no encontrada</h1>' +
-      '<p class="sub">Esa ruta no existe. Prueba por <a href="#/servicios">servicios</a>, <a href="#/blog">el blog</a> o <a href="#/precios">precios</a>.</p></div></div></section>';
+      '<p class="sub">Esa ruta no existe. Prueba por <a href="#/servicios">servicios</a>, <a href="#/blog">el blog</a> o <a href="#/contacto">contacto</a>.</p></div></div></section>';
     document.title='Página no encontrada | Calibra'; markActive(route); window.scrollTo(0,0); return;
   }
 
