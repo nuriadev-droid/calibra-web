@@ -34,43 +34,12 @@ var ROI = '<div class="glass roi"><div class="roi-in">' +
 '<div class="outrow"><span>Meses hasta amortizar</span><b id="o-pay">—</b></div></div>' +
 '<p class="disc">Cálculo: personas × horas/semana × 46 semanas laborables × % automatizable × coste/hora. No incluye el coste de los modelos ni de las licencias, que suele ir de 40 a 300 € al mes.</p></div></div>';
 
-var PRICING = '<div class="glass tablewrap"><table class="price-t"><thead><tr>' +
-'<th>Producto</th><th>Qué te llevas</th><th>Plazo</th><th>Precio</th></tr></thead><tbody>' +
-'<tr><td><b>Diagnóstico exprés</b><small class="sub">Un proceso</small></td><td><small>Lo miramos, te decimos si se automatiza, cómo y cuánto costaría</small></td><td><small>3 días laborables</small></td><td class="p">490 €</td></tr>' +
-'<tr><td><b>Automatización suelta</b><small class="sub">Sin compromiso</small></td><td><small>Un flujo en producción, con gestión de errores y documentación</small></td><td><small>5-10 días laborables</small></td><td class="p">900 – 2.500 €</td></tr>' +
-'<tr><td><b>Auditoría</b><small class="sub">Varios procesos</small></td><td><small>Mapa de procesos, priorización por retorno, evaluación de RGPD y AI Act, plan a seis meses</small></td><td><small>8 días laborables</small></td><td class="p">2.500 – 4.500 €</td></tr>' +
-'<tr><td><b>Piloto</b><small class="sub">Un caso de uso</small></td><td><small>Un proceso en producción con datos reales, gestión de errores y formación</small></td><td><small>10 días laborables</small></td><td class="p">3.500 €</td></tr>' +
-'<tr><td><b>Implantación</b><small class="sub">3 a 8 procesos</small></td><td><small>Integraciones con tu ERP y CRM, panel de trazabilidad, documentación y traspaso</small></td><td><small>4-8 semanas</small></td><td class="p">12.000 – 40.000 €</td></tr>' +
-'<tr><td><b>Operación</b><small class="sub">Con SLA</small></td><td><small>Monitorización, incidencias con tiempos comprometidos, ajustes por cambios de API, informe mensual</small></td><td><small>Activo en 48 h</small></td><td class="p">600 – 2.500 €/mes</td></tr>' +
-'</tbody></table></div>';
-
 /* ---------- páginas especiales ---------- */
-P['precios'] = {
-  t:'Precios de automatización con IA | Publicados',
-  d:'Precios públicos: diagnóstico exprés 490 €, automatización suelta 900-2.500 €, auditoría 2.500-4.500 €, implantación 12.000-40.000 €, operación 600-2.500 €/mes.',
-  h1:'Precios', sub:'Publicados, porque comparar cinco agencias no debería costar cinco llamadas.', crumb:[],
-  rel:['servicios/auditoria-ia','metodo','comparativas/agencia-vs-equipo-interno'],
-  html:'<p class="lead">El 74 % de los compradores B2B quiere el precio desde el principio y solo una de cada cuatro agencias lo publica. Hay una razón nueva además de la evidente: un asistente de IA no puede recomendarte si tu precio no está documentado en público.</p>' +
-  PRICING +
-  '<div class="callout"><b>Empresas pequeñas y despachos de pocas personas:</b> empezad por el diagnóstico exprés. 490 €, tres días, un solo proceso. De ahí salen automatizaciones de 900 a 2.500 € que se montan en días. La escalera completa está pensada para cuando el volumen la justifique, y os diremos con franqueza en qué escalón estáis.</div>' +
-  '<h2>Calcula tu caso</h2><p>Mueve los valores a lo que se parezca a tu empresa. Es una estimación para ordenar la conversación, no una promesa: el número serio sale de medir.</p>' + ROI +
-  '<h2>Qué hace que suba el precio</h2><ul class="tick">' +
-  '<li>Cuántos sistemas hay que integrar y si tienen API decente</li>' +
-  '<li>El estado de tus datos: duplicados y maestros sin mantener multiplican el esfuerzo</li>' +
-  '<li>Las excepciones: el camino feliz es el 20 % del trabajo</li>' +
-  '<li>La criticidad del proceso y el nivel de trazabilidad exigido</li>' +
-  '<li>Quién lo va a mantener después</li></ul>' +
-  '<div class="faq"><h2>Preguntas</h2>' +
-  '<details><summary>¿El precio incluye el coste de los modelos?</summary><p>No. El consumo de modelos y licencias se factura aparte y a coste, sin margen. En un proceso de tamaño medio suele ir de 40 a 300 € al mes, y se acota con límite de gasto y alerta.</p></details>' +
-  '<details><summary>¿Se puede pagar por hitos?</summary><p>La implantación sí, por defecto. La auditoría y el piloto son precio cerrado y se facturan al inicio y a la entrega.</p></details>' +
-  '<details><summary>¿Hay permanencia en la operación?</summary><p>No. Treinta días de preaviso y sin penalización.</p></details></div>'
-};
-
 P['faq'] = {
   t:'Preguntas frecuentes sobre automatización con IA',
   d:'Las objeciones reales que aparecen en la primera llamada, respondidas sin marketing.',
   h1:'Preguntas frecuentes', sub:'Lo que se pregunta de verdad en la primera llamada.', crumb:[],
-  rel:['precios','metodo','confianza/seguridad-y-datos'],
+  rel:['metodo','servicios/auditoria-ia','confianza/seguridad-y-datos'],
   html:'<div class="faq">' +
   '<details open><summary>¿Por qué cobráis la auditoría si todo el mundo la regala?</summary><p>Porque una auditoría gratuita de 45 minutos no es una auditoría: es una llamada de ventas, y su conclusión siempre es la misma. La nuestra son ocho días laborables de entrevistas y análisis, y el entregable vale por sí solo aunque no sigas. Si contratas la implantación en 60 días, el importe se descuenta íntegro.</p></details>' +
   '<details><summary>¿Esto es un agente de IA de verdad o software de siempre con otro nombre?</summary><p>Depende del proceso, y te lo diremos sin adornos. Muchas veces la mejor solución es una automatización determinista sin nada de IA: más barata, más rápida y no alucina. Gartner estima que de los miles de proveedores que dicen vender IA agéntica solo unos 130 lo hacen de verdad; no tenemos interés en engordar esa lista. <a href="#/comparativas/rpa-vs-ia">Más sobre esto</a>.</p></details>' +
@@ -78,7 +47,7 @@ P['faq'] = {
   '<details><summary>Me sale más barato contratar a alguien interno</summary><p>A partir de cierto volumen, sí. <a href="#/comparativas/agencia-vs-equipo-interno">Aquí están los números</a>, incluido el punto de corte a partir del cual te conviene contratar dentro.</p></details>' +
   '<details><summary>¿Usáis n8n, Make o desarrollo a medida?</summary><p>Los tres, según el caso, y se decide en la auditoría con criterios escritos. <a href="#/comparativas/n8n-vs-make">Comparativa</a>.</p></details>' +
   '<details><summary>¿Cuánto tarda en verse algo funcionando?</summary><p>Diez días laborables desde que tenemos accesos: ese es el compromiso del piloto y está en el contrato. Para la implantación completa no damos un número único, porque depende de cuántos sistemas haya y del estado de tus datos — y eso lo sabemos al cerrar la auditoría, en el día ocho.</p></details>' +
-  '<details><summary>Somos una empresa pequeña, ¿nos vale?</summary><p>Sí. Empieza por el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a> de 490 €. Si el proceso no merece automatizarse todavía, el informe lo dirá.</p></details>' +
+  '<details><summary>Somos una empresa pequeña, ¿nos vale?</summary><p>Sí. Empieza por el <a href="#/servicios/auditoria-ia">diagnóstico exprés</a> de un solo proceso. Si el proceso no merece automatizarse todavía, el informe lo dirá.</p></details>' +
   '<details><summary>¿Dónde van nuestros datos?</summary><p>A la UE, o a tu propia infraestructura. <a href="#/confianza/seguridad-y-datos">Detalle completo</a>.</p></details></div>'
 };
 
@@ -88,8 +57,8 @@ var HOME =
 '<span class="pill"><i class="led"></i><span>Agencia de inteligencia artificial</span></span>' +
 '<h1>Automatizamos el trabajo que tu equipo <span class="grad">repite cada día</span>.</h1>' +
 '<p class="hero-lead">Somos una agencia de IA: construimos <b>chatbots</b>, agentes de inteligencia artificial y automatizaciones de procesos. Con trazabilidad, con SLA por escrito y con los datos en Europa. Empezamos por un diagnóstico de precio cerrado: sales con el mapa de tus procesos y una cifra, contrates o no el desarrollo.</p>' +
-'<div class="hero-cta"><a class="btn btn-pri" href="#/contacto">Reservar diagnóstico</a><a class="btn btn-sec" href="#/precios">Ver precios y calculadora</a></div>' +
-'<p class="hero-note">Desde 490 € y tres días para un proceso suelto. El importe se descuenta íntegro si contratas la implantación en los 60 días siguientes.</p>' +
+'<div class="hero-cta"><a class="btn btn-pri" href="#/contacto">Reservar diagnóstico</a><a class="btn btn-sec" href="#/servicios">Ver servicios</a></div>' +
+'<p class="hero-note">Tres días para un proceso suelto. El importe se descuenta íntegro si contratas la implantación en los 60 días siguientes.</p>' +
 '<div class="strip"><span><i></i><span>Datos en la UE</span></span><span><i></i><span>Sin lock-in</span></span>' +
 '<span><i></i><span>SLA por escrito</span></span><span><i></i><span>Art. 50 AI Act</span></span><span><i></i><span>Piloto en 10 días</span></span></div>' +
 '</div><div class="glass"><div class="console-head"><span class="tl"><i></i><i></i><i></i></span><span class="lab">Flujo en producción · facturas de proveedor</span></div>' +
@@ -115,7 +84,7 @@ var HOME =
 '<section><div class="wrap"><div class="sec-head"><span class="lab">Qué hacemos</span>' +
 '<h2>Lo que hace una <span class="grad">agencia de IA</span> cuando trabaja en serio</h2></div>' +
 '<div class="cards">' +
-'<a class="card" href="#/servicios/auditoria-ia"><span class="k">Empieza aquí</span><h3>Diagnóstico y auditoría</h3><p>Desde 490 € y tres días. Medimos antes de construir.</p></a>' +
+'<a class="card" href="#/servicios/auditoria-ia"><span class="k">Empieza aquí</span><h3>Diagnóstico y auditoría</h3><p>Tres días para un proceso suelto. Medimos antes de construir.</p></a>' +
 '<a class="card" href="#/servicios/automatizacion-procesos"><span class="k">Servicio</span><h3>Automatización de procesos</h3><p>Los saltos manuales entre tus sistemas, con gestión de errores.</p></a>' +
 '<a class="card" href="#/servicios/documentos-facturas"><span class="k">Servicio</span><h3>Documentos y facturación</h3><p>Facturas leídas, validadas y registradas sin tecleo.</p></a>' +
 '<a class="card" href="#/servicios/agentes-ia"><span class="k">Servicio</span><h3>Chatbots y agentes de IA</h3><p>Chatbot en tu web, en WhatsApp o por teléfono, conectado a tus datos y con escalado a persona.</p></a>' +
@@ -150,6 +119,6 @@ var HOME =
 '<div style="max-width:760px;margin:0 auto">' + FORM + '</div></div></div></section>';
 
 
-window.FRAG = {FORM:FORM, ROI:ROI, PRICING:PRICING};
+window.FRAG = {FORM:FORM, ROI:ROI};
 window.HOME = HOME;
 })();
