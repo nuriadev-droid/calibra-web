@@ -24,8 +24,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Generar las paginas estaticas
-        run: node build-site.js
+      - name: Paginas de servicios para el modo puente
+        run: |
+          git clone --depth 1 https://github.com/innovare-genetics/calibra-studio.git /tmp/studio
+          node /tmp/studio/build-static.js --dominio https://studio.calibraautomation.com
+      - name: Generar la web de producto
+        run: STUDIO_DIST=/tmp/studio/dist node build-site.js
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

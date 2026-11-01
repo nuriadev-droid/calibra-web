@@ -27,10 +27,24 @@ const stub = to => `<!doctype html>
 </body></html>
 `;
 const routes = fs.readFileSync(path.join(SRC, 'redirects.txt'), 'utf8').split('\n').map(s => s.trim()).filter(Boolean);
-for (const r of routes) {
-  const dir = path.join(OUT, r);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), stub(STUDIO + '/' + r));
+/* Modo puente: mientras studio.calibraautomation.com no resuelve, las URLs antiguas siguen
+   sirviendo las páginas de servicios (generadas desde el repo calibra-studio, con canonical
+   ya apuntando a studio). Cuando existe el archivo `studio-live`, pasan a ser redirecciones. */
+const STUDIO_DIST = process.env.STUDIO_DIST;
+const LIVE = fs.existsSync(path.join(SRC, 'studio-live')) || !STUDIO_DIST || !fs.existsSync(STUDIO_DIST);
+if (!LIVE) {
+  const skip = new Set(['index.html', 'CNAME', 'robots.txt', 'sitemap.xml', 'llms.txt', '.nojekyll', 'marca']);
+  for (const f of fs.readdirSync(STUDIO_DIST)) {
+    if (skip.has(f)) continue;
+    fs.cpSync(path.join(STUDIO_DIST, f), path.join(OUT, f), { recursive: true });
+  }
+  console.log('modo puente: páginas de servicios servidas también desde la raíz');
+} else {
+  for (const r of routes) {
+    const dir = path.join(OUT, r);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), stub(STUDIO + '/' + r));
+  }
 }
 // rutas sueltas de la web antigua
 for (const [from, to] of [['feed.xml', '/feed.xml'], ['studio', '/']]) {
@@ -85,4 +99,4 @@ Contact: info@calibraautomation.com
 `);
 fs.writeFileSync(path.join(OUT, 'CNAME'), 'calibraautomation.com\n');
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
-console.log(`web de producto en ./dist · ${routes.length} redirecciones a ${STUDIO}`);
+console.log(`web de producto en ./dist · ${LIVE ? routes.length + ' redirecciones a ' + STUDIO : 'modo puente'}`);
