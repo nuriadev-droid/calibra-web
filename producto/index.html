@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calibra — AI employees that run your processes end to end</title>
+<meta name="description" content="Describe a process in plain words and Calibra builds the workflow, simulates it before it goes live, proposes fixes when something breaks and shows what every automation saves. 750+ apps. Free plan.">
+<script>if(/^#\/./.test(location.hash)){location.replace("https://studio.calibraautomation.com/"+location.hash.slice(2).replace(/\/?$/,"/"));}</script>
+<link rel="canonical" href="https://calibraautomation.com/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#05060B">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Calibra">
+<meta property="og:title" content="Calibra — AI employees that run your processes end to end">
+<meta property="og:description" content="Describe it. Calibra builds it, tests it, fixes it with your OK and shows what it saves. 750+ apps, free plan, data hosted in the EU.">
+<meta property="og:url" content="https://calibraautomation.com/">
+<meta property="og:image" content="https://calibraautomation.com/assets/og-product.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/marca/calibra-isotipo-gradient.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/marca/calibra-isotipo-gradient-512.png">
+<link rel="preload" href="/assets/fonts/sora-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://calibraautomation.com/#org","name":"Calibra","url":"https://calibraautomation.com/","email":"info@calibraautomation.com","logo":"https://calibraautomation.com/marca/calibra-isotipo-gradient-512.png"},{"@type":"SoftwareApplication","name":"Calibra","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://app.calibraautomation.com/","publisher":{"@id":"https://calibraautomation.com/#org"},"description":"Workflow automation platform with AI: build workflows by describing them, simulate before going live, AI-proposed fixes, AI cost suggestions and value tracking per workflow.","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"EUR"},{"@type":"Offer","name":"Basic","price":"8","priceCurrency":"EUR"},{"@type":"Offer","name":"Pro","price":"16","priceCurrency":"EUR"},{"@type":"Offer","name":"Team","price":"29","priceCurrency":"EUR"}]}]}</script>
+<style>
+@font-face{font-family:'Sora';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/sora-600.woff2) format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/sora-700.woff2) format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/sora-800.woff2) format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/plus-jakarta-sans-400.woff2) format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/plus-jakarta-sans-500.woff2) format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/plus-jakarta-sans-600.woff2) format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/plus-jakarta-sans-700.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/jetbrains-mono-500.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/jetbrains-mono-600.woff2) format('woff2')}
+:root{--bg:#05060B;--panel:rgba(255,255,255,.025);--card:#0A0B12;--line:rgba(255,255,255,.085);--line2:rgba(255,255,255,.16);--ink:#F1F3FA;--ink2:#AEB4CC;--muted:#8A91AD;--iris:#A894FF;--cyan:#25D8EE;--lime:#8CF56B;--amber:#FFCF9A;
+--grad:linear-gradient(100deg,#8B6BFF 0%,#5C8CFF 42%,#25D8EE 100%);--display:'Sora',system-ui,sans-serif;--body:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--wrap:1240px;--gut:clamp(18px,4vw,44px)}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:#C9BCFF;text-decoration:none}a:hover{color:#fff}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:100}.skip:focus{left:8px}
+.eyebrow{font:600 13px var(--mono);letter-spacing:.08em;color:var(--cyan);text-transform:uppercase}
+.eyebrow.iris{color:var(--iris)}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.03em}
+h2{font-weight:700;font-size:clamp(30px,3.8vw,48px);line-height:1.1}
+.lead{font-size:18px;line-height:1.6;color:var(--ink2);margin:0}
+.grad{background:linear-gradient(100deg,#A894FF 0%,#7FA6FF 45%,#25D8EE 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:14px;font:700 16px var(--body);cursor:pointer;border:0;white-space:nowrap;transition:filter .15s,border-color .15s,background .15s}
+.btn-pri{background:var(--grad);color:#05060B}.btn-pri:hover{filter:brightness(1.08);color:#05060B}
+.btn-sec{background:transparent;border:1px solid var(--line2);color:var(--ink);font-weight:600}.btn-sec:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-lg{min-height:54px;padding:0 26px}
+.check{display:inline-flex;gap:8px;align-items:center}
+.check svg,.li-check svg{flex:0 0 auto}
+.section{padding:110px 0}
+.section-head{max-width:760px;display:flex;flex-direction:column;gap:16px;margin-bottom:52px}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:18px;transition:border-color .2s}
+.card:hover{border-color:rgba(255,255,255,.18)}
+.divider{border-top:1px solid rgba(255,255,255,.07)}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(5,6,11,.78);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px}.brand img{display:block}
+.links{display:flex;gap:24px;flex:1}
+.links a,.login{color:var(--ink2);font-weight:500;font-size:15px;padding:10px 2px}.links a:hover,.login:hover{color:#fff}
+.nav-cta{display:flex;align-items:center;gap:14px;margin-left:auto}
+.nav-cta .btn{min-height:44px;padding:0 18px;font-size:15px;border-radius:12px}
+.burger{display:none;background:transparent;border:1px solid var(--line2);color:var(--ink);border-radius:12px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer}
+.mnav{display:none;border-top:1px solid var(--line);padding:12px var(--gut) 20px}
+.mnav a{display:block;padding:12px 0;color:var(--ink);font-weight:600;border-bottom:1px solid rgba(255,255,255,.05)}
+.mnav.open{display:block}
+@media (max-width:900px){.links,.login{display:none}.burger{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-220px 0 auto 0;height:780px;background:radial-gradient(600px 340px at 28% 30%,rgba(124,92,255,.22),transparent 70%),radial-gradient(520px 300px at 80% 40%,rgba(37,216,238,.13),transparent 70%);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px;opacity:.55;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+.hero-in{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:84px;padding-bottom:96px}
+.hero-copy{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:26px}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);border-radius:999px;padding:7px 14px 7px 8px;font-size:13px;color:var(--ink2)}
+.pill b{background:rgba(140,245,107,.14);color:var(--lime);border-radius:999px;padding:3px 9px;font:600 11px var(--mono);letter-spacing:.04em}
+.hero h1{font-weight:800;font-size:clamp(40px,5.6vw,68px);line-height:1.04;letter-spacing:-.035em}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);max-width:560px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.proof{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.demo{flex:1 1 520px;min-width:0}
+.window{border:1px solid rgba(255,255,255,.12);border-radius:22px;background:linear-gradient(180deg,rgba(20,22,34,.94),rgba(10,11,18,.97));box-shadow:0 40px 120px rgba(0,0,0,.55);overflow:hidden}
+.wbar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.07);font:500 12px var(--mono);color:var(--muted)}
+.wbar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.14)}
+.wbody{padding:20px;display:flex;flex-direction:column;gap:16px}
+.mlabel{font:600 12px var(--mono);color:var(--muted);letter-spacing:.06em}
+.prompt{border:1px solid rgba(124,92,255,.45);background:rgba(124,92,255,.07);border-radius:14px;padding:16px 18px;font-size:15px;line-height:1.55;min-height:96px}
+.prompt .caret{display:inline-block;width:2px;height:1.05em;background:var(--iris);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chips span{font-size:13px;color:var(--muted)}
+.chip{border-radius:999px;padding:0 14px;min-height:36px;font:600 13px var(--body);cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--ink2)}
+.chip:hover{border-color:rgba(255,255,255,.35);color:#fff}
+.chip[aria-pressed="true"]{background:rgba(124,92,255,.22);border-color:rgba(168,148,255,.7);color:#fff}
+.built{border-top:1px dashed rgba(255,255,255,.1);padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.built strong{display:flex;align-items:center;gap:10px;font-size:14px}
+.ok{font:500 12px var(--mono);color:var(--lime);background:rgba(140,245,107,.1);border-radius:8px;padding:6px 10px}
+.steps{list-style:none;margin:0;padding:0}
+.step{display:flex;gap:14px;opacity:0;transform:translateY(6px);animation:in .35s ease forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.rail{display:flex;flex-direction:column;align-items:center;width:36px;flex:0 0 36px}
+.mono{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:700 12px var(--display);flex:0 0 36px}
+.line{width:2px;flex:1 1 auto;min-height:14px;background:linear-gradient(180deg,rgba(124,92,255,.5),rgba(37,216,238,.25))}
+.step:last-child .line{display:none}
+.sbody{flex:1;min-width:0;padding:4px 0 16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 12px}
+.stitle{font-size:14.5px;font-weight:600}.sdet{font-size:13px;color:var(--muted);margin-top:2px}
+.tag{align-self:flex-start;font:500 11.5px var(--mono);border-radius:7px;padding:4px 8px;white-space:nowrap}
+.tag.ai{color:#C9BCFF;background:rgba(124,92,255,.14)}.tag.you{color:var(--amber);background:rgba(255,184,107,.12)}
+
+/* strip */
+.strip{background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.strip .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;padding-top:28px;padding-bottom:28px}
+.strip strong{font-family:var(--display);font-size:18px}
+.strip .names{display:flex;flex-wrap:wrap;gap:10px 26px;font:600 15px var(--display);color:var(--muted);flex:1 1 520px}
+
+/* grids */
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.feature{padding:28px;display:flex;flex-direction:column;gap:14px}
+.ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.feature h3{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.feature p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+.how{list-style:none;margin:0;padding:0}
+.how li{padding-top:20px;display:flex;flex-direction:column;gap:10px;border-top:2px solid}
+.how .n{font:600 13px var(--mono)}
+.how strong{font-family:var(--display);font-size:19px}
+.how span:last-child{font-size:15px;line-height:1.6;color:var(--ink2)}
+
+/* spotlight */
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:22px}
+.spot{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:34px;display:flex;flex-direction:column;gap:22px}
+.spot h3{font-size:28px;line-height:1.15;letter-spacing:-.025em}
+.spot p{margin:0;font-size:16px;line-height:1.6;color:var(--ink2)}
+.panel{border:1px solid rgba(255,255,255,.1);border-radius:16px;background:#0B0C14;padding:20px;display:flex;flex-direction:column;gap:14px}
+.badge{flex:0 0 auto;font:600 11px var(--mono);border-radius:6px;padding:4px 8px}
+.diff{font:13px/1.7 var(--mono);background:rgba(255,255,255,.03);border-radius:10px;padding:12px 14px;overflow-x:auto}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kpis span{font-size:12.5px;color:var(--muted);display:block}
+.kpis strong{font-family:var(--display);font-size:clamp(22px,2.4vw,28px)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:90px;border-bottom:1px solid rgba(255,255,255,.08)}
+.bars i{flex:1;border-radius:5px 5px 0 0;background:rgba(124,92,255,.35)}
+.bars i:last-child{background:linear-gradient(180deg,#25D8EE,#5C8CFF)}
+
+/* templates */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab{border-radius:12px;padding:0 18px;min-height:44px;font:600 14.5px var(--body);cursor:pointer;background:transparent;color:var(--ink2);border:1px solid rgba(255,255,255,.14)}
+.tab:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.tab[aria-selected="true"]{background:var(--ink);color:#05060B;border-color:var(--ink)}
+.tpl{background:var(--card);padding:26px;display:flex;flex-direction:column;gap:14px}
+.tpl .hd{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 14px var(--display);flex:0 0 44px}
+.tpl h3{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.tpl .apps{font-size:13px;color:var(--muted)}
+.tpl p{margin:0;font-size:15px;line-height:1.6;color:var(--ink2);flex:1}
+.tpl .ft{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.07);padding-top:14px;font-size:13px;color:var(--muted)}
+.tpl .ft a{font-weight:600}
+
+/* compare */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:18px}
+table{width:100%;min-width:720px;border-collapse:collapse;font-size:15.5px}
+th,td{padding:18px 24px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
+thead th{color:var(--ink2);font-weight:600;border-bottom-color:var(--line)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+tbody th{font-weight:600}
+td.old{color:var(--muted)}
+.us{background:rgba(124,92,255,.06)}
+thead .us{background:rgba(124,92,255,.1);color:#fff;font-family:var(--display);font-weight:700;border-bottom-color:rgba(124,92,255,.35)}
+
+/* integrations */
+.int{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.int-copy{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink2)}
+.ul li{display:flex;gap:10px;align-items:flex-start}
+.apps-grid{flex:1 1 520px;min-width:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:520px){.apps-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.app{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:16px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:13px;color:var(--ink2);text-align:center}
+.app b{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:700 13px var(--display)}
+
+/* trust */
+.trust{padding:24px;display:flex;flex-direction:column;gap:8px}
+.trust strong{font-family:var(--display);font-size:17px}
+.trust span{font-size:14.5px;line-height:1.6;color:var(--ink2)}
+
+/* pricing */
+.center{text-align:center;align-items:center;margin-left:auto;margin-right:auto}
+.toggle{display:inline-flex;border:1px solid var(--line2);border-radius:14px;padding:4px;gap:4px}
+.toggle button{border:0;background:transparent;color:var(--ink2);font:600 14px var(--body);border-radius:10px;min-height:40px;padding:0 16px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#05060B}
+.save{font:600 11px var(--mono);color:#05060B;background:var(--lime);border-radius:6px;padding:3px 6px;margin-left:6px}
+.toggle button[aria-pressed="true"] .save{background:#05060B;color:var(--lime)}
+.plan{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--line);background:var(--card)}
+.plan.pop{border-color:rgba(168,148,255,.6);background:linear-gradient(180deg,rgba(124,92,255,.13),#0A0B12 60%);box-shadow:0 20px 60px rgba(124,92,255,.15)}
+.plan .hd{display:flex;justify-content:space-between;align-items:center}
+.plan h3{font-size:20px}
+.plan .popb{font:600 11px var(--mono);color:#05060B;background:var(--cyan);border-radius:6px;padding:4px 8px}
+.price{font-family:var(--display);font-size:38px;font-weight:700;letter-spacing:-.02em}
+.price small{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}
+.plan .sub{font-size:13px;color:var(--muted);min-height:20px;margin-top:-10px}
+.plan .desc{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.plan ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:var(--ink2);flex:1}
+.plan li{display:flex;gap:8px}
+.plan li:before{content:"";flex:0 0 16px;height:16px;margin-top:2px;background:no-repeat center/16px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2325D8EE' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")}
+.plan .btn{width:100%}
+.incl{margin-top:26px;border:1px solid var(--line);border-radius:18px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:12px 32px;font-size:14.5px;color:var(--ink2)}
+.incl strong{color:var(--ink)}
+.note{font-size:13.5px;color:var(--muted);margin-top:16px;text-align:center}
+
+/* faq */
+.faq{max-width:880px;margin:0 auto}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font:400 24px var(--display);color:var(--iris);line-height:1}
+details[open] summary:after{content:"−"}
+details p{margin:0 0 22px;color:var(--ink2);line-height:1.65;max-width:780px}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:56px}
+.contact-copy{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:16px}
+form{flex:1 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:var(--card);padding:clamp(22px,3vw,34px)}
+.fld{display:flex;flex-direction:column;gap:8px}
+.fld.full{grid-column:1/-1}
+label{font-size:14px;font-weight:600}
+label em{font-style:normal;color:var(--muted);font-weight:500}
+input,select,textarea{background:#05060B;border:1px solid rgba(255,255,255,.16);border-radius:12px;color:var(--ink);font:15px var(--body);padding:12px 14px;min-height:48px;width:100%}
+textarea{resize:vertical;min-height:120px}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23AEB4CC' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset:1px;border-color:transparent}
+.form-ft{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.form-ft small{font-size:13px;color:var(--muted);max-width:420px;line-height:1.5}
+.msg{grid-column:1/-1;border-radius:12px;padding:14px 16px;font-size:15px;display:none}
+.msg.ok{display:block;background:rgba(140,245,107,.1);color:var(--lime);font-family:var(--body)}
+.msg.err{display:block;background:rgba(255,156,156,.1);color:#FFB4B4}
+.hp{position:absolute;left:-9999px}
+
+/* final + footer */
+.final{position:relative;overflow:hidden}
+.final:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 50% 100%,rgba(124,92,255,.22),transparent 70%);pointer-events:none}
+.final .wrap{position:relative;max-width:920px;text-align:center;display:flex;flex-direction:column;gap:22px;align-items:center;padding-top:120px;padding-bottom:120px}
+.final h2{font-weight:800;font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-.035em}
+.foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;padding-top:64px;padding-bottom:40px;font-size:14.5px}
+.foot h4{margin:0 0 4px;font:600 13px var(--body);letter-spacing:.06em;color:var(--ink)}
+.foot .col{display:flex;flex-direction:column;gap:10px}
+.foot .col a{color:var(--ink2)}.foot .col a:hover{color:#fff}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;padding-bottom:36px;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Calibra home">
+      <img src="/marca/calibra-isotipo-gradient.svg" alt="" width="30" height="30">
+      <img src="/marca/calibra-wordmark-light.svg" alt="calibra" width="94" height="24">
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#product">Product</a>
+      <a href="#templates">Templates</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login" href="https://app.calibraautomation.com/sign-in">Log in</a>
+      <a class="btn btn-pri" href="https://app.calibraautomation.com/sign-up">Start free</a>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#product">Product</a><a href="#templates">Templates</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://app.calibraautomation.com/sign-in">Log in</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="pill"><b>NEW</b>Build a workflow by describing it in plain words</span>
+      <h1>Hire <span class="grad">AI employees</span> that run your processes end to end.</h1>
+      <p class="lead">Describe a process in plain words. Calibra builds the workflow, lets you simulate it before it goes live, proposes the fix when something breaks and shows you exactly what it saves.</p>
+      <div class="ctas">
+        <a class="btn btn-pri btn-lg" href="https://app.calibraautomation.com/sign-up">Start free — no card needed</a>
+        <a class="btn btn-sec btn-lg" href="#how"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg>See how it works</a>
+      </div>
+      <div class="proof">
+        <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free plan forever</span>
+        <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Data hosted in the EU</span>
+        <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Export every workflow</span>
+      </div>
+    </div>
+
+    <div class="demo" aria-label="Interactive example: Calibra builds a workflow from a description">
+      <div class="window">
+        <div class="wbar"><i></i><i></i><i></i><span style="margin-left:10px">app.calibraautomation.com · Build with AI</span></div>
+        <div class="wbody">
+          <div class="mlabel">DESCRIBE WHAT YOU WANT AUTOMATED</div>
+          <div class="prompt" id="prompt" aria-live="polite"></div>
+          <div class="chips" role="group" aria-label="Examples">
+            <span>Try:</span>
+            <button class="chip" type="button" data-ex="0" aria-pressed="true">Supplier invoices</button>
+            <button class="chip" type="button" data-ex="1" aria-pressed="false">WhatsApp bookings</button>
+            <button class="chip" type="button" data-ex="2" aria-pressed="false">Weekly sales report</button>
+          </div>
+          <div class="built">
+            <strong><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A894FF" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6-4.6-1.9 4.6-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg>Calibra built this workflow</strong>
+            <span class="ok" id="sim">Simulation · 0 errors</span>
+          </div>
+          <ol class="steps" id="steps"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label="Integrations">
+  <div class="wrap">
+    <div style="color:var(--ink2);font-size:14px"><strong>750+ apps</strong> &nbsp;connected out of the box</div>
+    <div class="names"><span>Gmail</span><span>Outlook</span><span>Google Sheets</span><span>Slack</span><span>WhatsApp</span><span>HubSpot</span><span>Stripe</span><span>Shopify</span><span>Holded</span><span>Notion</span><span>Airtable</span><span>Teams</span></div>
+  </div>
+</section>
+
+<section class="section" id="product">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Not another workflow builder</span>
+      <h2>Automation that builds, tests and repairs itself. You stay in charge.</h2>
+      <p class="lead">Everything you expect from a visual automation platform, plus the part that usually eats your week: building, testing, fixing and proving it was worth it.</p>
+    </div>
+    <div class="g3">
+      <article class="card feature">
+        <div class="ic" style="background:rgba(124,92,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9BCFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Describe it. Calibra builds it.</h3>
+        <p>Write what should happen in plain words. The AI copilot picks the apps, builds the steps, validates them and leaves a workflow ready for you to review.</p>
+      </article>
+      <article class="card feature">
+        <div class="ic" style="background:rgba(92,140,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DBBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+        <h3>Simulate before it goes live</h3>
+        <p>Run the whole workflow as a simulation and get a step-by-step report of what each step would do, before anything real is sent or written.</p>
+      </article>
+      <article class="card feature">
+        <div class="ic" style="background:rgba(37,216,238,.14)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FE6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Fixes proposed, you approve</h3>
+        <p>When a run fails, Calibra diagnoses the error in plain words and proposes the exact change to the failing step. Nothing changes until you accept it.</p>
+      </article>
+      <article class="card feature">
+        <div class="ic" style="background:rgba(140,245,107,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8F58E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Stop overpaying for AI</h3>
+        <p>Use your own AI key with no markup. Calibra spots AI steps running on an expensive model and suggests a cheaper one that does the job.</p>
+      </article>
+      <article class="card feature">
+        <div class="ic" style="background:rgba(255,184,107,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCF9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>See what every workflow is worth</h3>
+        <p>Tell Calibra what an hour of that work costs you. It shows hours saved, what the runs cost and the net value of each workflow.</p>
+      </article>
+      <article class="card feature">
+        <div class="ic" style="background:rgba(243,166,214,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3A6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div>
+        <h3>Move in from any tool</h3>
+        <p>Already automating somewhere else? Import your existing workflows and get a compatibility report that shows what moved over and what needs a look.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how" style="padding-top:20px">
+  <div class="wrap">
+    <h2 style="font-size:clamp(28px,3vw,38px);margin-bottom:40px">From idea to running process in four steps</h2>
+    <ol class="how g4">
+      <li style="border-color:#8B6BFF"><span class="n" style="color:#A894FF">01 · DESCRIBE</span><strong>Say what should happen</strong><span>Write it like you would brief a new hire, or start from a template. You get a visual workflow you can read and edit.</span></li>
+      <li style="border-color:#7A7DFF"><span class="n" style="color:#A3A6FF">02 · SIMULATE</span><strong>Check every step</strong><span>A simulation shows what each step would do, so you catch mistakes before they reach a customer.</span></li>
+      <li style="border-color:#5C8CFF"><span class="n" style="color:#8FB0FF">03 · RUN</span><strong>Switch it on</strong><span>It runs on its own, waits for your approval where you decide, and keeps a full history of every run.</span></li>
+      <li style="border-color:#25D8EE"><span class="n" style="color:#25D8EE">04 · IMPROVE</span><strong>Keep it healthy</strong><span>Get a fix proposal when something fails, cheaper-model suggestions for AI steps and a clear view of the value created.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="wrap duo">
+    <div class="spot">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span class="eyebrow iris">AI-assisted repair</span>
+        <h3>The AI proposes. You approve.</h3>
+        <p>When an app changes or a step starts failing, you don't have to dig through logs. Calibra explains what went wrong and prepares the fix for you to accept.</p>
+      </div>
+      <div class="panel" id="repair">
+        <div id="repair-a" style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span class="badge" style="color:#FFB86B;background:rgba(255,184,107,.12)">FAILED RUN</span><span style="font-size:14.5px;line-height:1.5">Invoice intake · step 3 failed: the field <code style="font-family:var(--mono);font-size:13px">customer_email</code> no longer exists.</span></div>
+          <div class="diff" aria-label="Proposed change"><div style="color:#FF9C9C">- email: {{step_2.customer_email}}</div><div style="color:#8CF56B">+ email: {{step_2.contact.email}}</div></div>
+          <div style="font-size:13.5px;color:var(--ink2)">Diagnosis: the accounting app moved the email inside <em>contact</em>.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-pri" type="button" id="approve" style="min-height:44px;font-size:14px;border-radius:12px">Apply fix</button><button class="btn btn-sec" type="button" style="min-height:44px;font-size:14px;border-radius:12px">See details</button></div>
+        </div>
+        <div id="repair-b" hidden style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:12px;align-items:center"><span class="badge" style="color:#8CF56B;background:rgba(140,245,107,.12)">FIXED</span><span style="font-size:14.5px">Fix applied by you. Retry the failed run in one click.</span></div>
+          <div style="font-size:13.5px;color:var(--ink2)">The change is saved in the workflow's version history.</div>
+          <div><button class="btn btn-sec" type="button" id="replay" style="min-height:44px;font-size:14px;border-radius:12px">Replay demo</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="spot">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span class="eyebrow">Value, not task counts</span>
+        <h3>Every workflow shows what it's worth.</h3>
+        <p>Set your hourly cost once. Calibra tracks the time saved, what the runs cost and the net value, workflow by workflow, so you know which ones pay off.</p>
+      </div>
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>Invoice intake · last 30 days</span><span style="font-family:var(--mono)">Example</span></div>
+        <div class="kpis"><div><span>Hours saved</span><strong>38 h</strong></div><div><span>Cost of runs</span><strong>€4</strong></div><div><span>Net value</span><strong style="color:var(--lime)">€946</strong></div></div>
+        <div class="bars" aria-hidden="true"><i style="height:32%"></i><i style="height:44%"></i><i style="height:38%"></i><i style="height:52%"></i><i style="height:47%"></i><i style="height:60%"></i><i style="height:58%"></i><i style="height:66%"></i><i style="height:62%"></i><i style="height:74%"></i><i style="height:80%"></i><i style="height:88%"></i></div>
+        <div style="display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--ink2)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Suggestion: step 2 can run on a smaller AI model.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section divider" id="templates" style="background:linear-gradient(180deg,rgba(124,92,255,.05),rgba(5,6,11,0))">
+  <div class="wrap">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px">
+      <div class="section-head" style="margin:0;max-width:700px">
+        <span class="eyebrow iris">Digital employees &amp; templates</span>
+        <h2>Don't start from a blank canvas. Hire a digital employee.</h2>
+        <p class="lead">85+ ready-made workflows, including AI employees that own a whole process. Connect your apps, adjust the rules and switch them on.</p>
+      </div>
+      <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Browse all templates</a>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Template categories" id="tabs"></div>
+    <div class="g3" id="tpls" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The old way vs. Calibra</span>
+      <h2>You shouldn't need an automation expert to automate.</h2>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th scope="col" style="width:22%"><span class="skip-sr" style="position:absolute;left:-9999px">Topic</span></th><th scope="col">Traditional automation tools</th><th scope="col" class="us">Calibra</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Building</th><td class="old">Drag modules and map every field by hand</td><td class="us">Describe the process and review the workflow Calibra builds</td></tr>
+          <tr><th scope="row">Testing</th><td class="old">Run it live and hope nothing goes wrong</td><td class="us">Simulate the whole workflow before it goes live</td></tr>
+          <tr><th scope="row">When something breaks</th><td class="old">Read the logs and work out the fix yourself</td><td class="us">A plain-words diagnosis and a proposed fix you approve</td></tr>
+          <tr><th scope="row">AI steps</th><td class="old">Use up your plan's tasks on top of the AI bill</td><td class="us">Your own AI key, no markup, plus cheaper-model suggestions</td></tr>
+          <tr><th scope="row">Logic and data steps</th><td class="old">Routers, filters and formatters count against your plan</td><td class="us">Logic, data, waits and approvals are free</td></tr>
+          <tr><th scope="row">Measuring</th><td class="old">A count of tasks executed</td><td class="us">Hours saved and net value per workflow</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section strip" id="integrations" style="padding:100px 0">
+  <div class="wrap int">
+    <div class="int-copy">
+      <span class="eyebrow iris">Integrations</span>
+      <h2 style="font-size:clamp(30px,3.4vw,44px)">Your tools, connected. Including the ones others skip.</h2>
+      <p class="lead" style="font-size:17px">750+ ready-made apps, including local accounting, invoicing and HR tools. And if an app isn't there yet, you can still connect it.</p>
+      <ul class="ul">
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>2,500+ public APIs ready to use, plus any API with an OpenAPI file</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>AI agents that use any connector as a tool, and MCP servers</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>Webhooks, HTTP requests and code steps when you need them</li>
+      </ul>
+      <a href="https://app.calibraautomation.com/sign-up" style="font-weight:600">See every integration in the app →</a>
+    </div>
+    <div class="apps-grid">
+      <div class="app"><b style="background:#1F2A44;color:#8FB0FF">GM</b>Gmail</div>
+      <div class="app"><b style="background:#1E2D4A;color:#9DBBFF">OL</b>Outlook</div>
+      <div class="app"><b style="background:#123326;color:#7FE0A8">GS</b>Google Sheets</div>
+      <div class="app"><b style="background:#3A1E33;color:#F3A6D6">SL</b>Slack</div>
+      <div class="app"><b style="background:#143322;color:#8CF56B">WA</b>WhatsApp</div>
+      <div class="app"><b style="background:#3A2416;color:#FFB98A">HS</b>HubSpot</div>
+      <div class="app"><b style="background:#24204A;color:#B3A6FF">ST</b>Stripe</div>
+      <div class="app"><b style="background:#1B3320;color:#A8E6A0">SH</b>Shopify</div>
+      <div class="app"><b style="background:#11313A;color:#7FE6F2">HD</b>Holded</div>
+      <div class="app"><b style="background:#2B2B33;color:#E6E8F0">NO</b>Notion</div>
+      <div class="app"><b style="background:#3A3014;color:#FFD98A">AT</b>Airtable</div>
+      <div class="app"><b style="background:#26244A;color:#B8B3FF">MT</b>Teams</div>
+      <div class="app"><b style="background:#1E2D4A;color:#9DBBFF">GC</b>Google Calendar</div>
+      <div class="app"><b style="background:#123326;color:#7FE0A8">DR</b>Google Drive</div>
+      <div class="app"><b style="background:#3A1E33;color:#F3A6D6">OD</b>Odoo</div>
+      <div class="app"><b style="background:#2A1F55;color:#C9BCFF">{ }</b>Any API</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 style="font-size:clamp(28px,3vw,38px);margin-bottom:40px;max-width:760px">Built in Europe for businesses that take their data seriously</h2>
+    <div class="g4">
+      <div class="card trust"><strong>EU data residency</strong><span>Workflows and run data are stored on servers in Frankfurt, Germany.</span></div>
+      <div class="card trust"><strong>No third-party tracking</strong><span>The app sends no telemetry to analytics providers. Your data is used to run your workflows, nothing else.</span></div>
+      <div class="card trust"><strong>Full history</strong><span>Every run, every step and every change is logged, with version history for each workflow.</span></div>
+      <div class="card trust"><strong>No lock-in</strong><span>Built on an open-source core. Export any workflow as a file whenever you want.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section divider" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Pricing</span>
+      <h2>Start free. Pay as you grow.</h2>
+      <p class="lead" style="font-size:17px">One credit per step that works with an app. Logic, data, waits and approvals never count.</p>
+      <div class="toggle" role="group" aria-label="Billing period">
+        <button type="button" data-period="m" aria-pressed="true">Monthly</button>
+        <button type="button" data-period="y" aria-pressed="false">Yearly<span class="save">2 MONTHS FREE</span></button>
+      </div>
+    </div>
+    <div class="g4">
+      <article class="plan">
+        <div class="hd"><h3>Free</h3></div>
+        <div class="price">€0<small> forever</small></div>
+        <div class="sub">&nbsp;</div>
+        <p class="desc">Try your first workflows with no time limit.</p>
+        <ul><li>1,000 credits / month</li><li>2 active workflows</li><li>1 user</li><li>All 750+ apps and templates</li></ul>
+        <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Start free</a>
+      </article>
+      <article class="plan">
+        <div class="hd"><h3>Basic</h3></div>
+        <div class="price" data-m="€8" data-y="€80"><span class="amt">€8</span><small class="per"> / month</small></div>
+        <div class="sub" data-m="Billed monthly, excl. VAT" data-y="€6.67 / month, billed yearly, excl. VAT">Billed monthly, excl. VAT</div>
+        <p class="desc">For freelancers and small businesses automating for real.</p>
+        <ul><li>10,000 credits / month</li><li>Unlimited active workflows</li><li>1 user</li><li>Simulation, AI repair and value tracking</li></ul>
+        <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Choose Basic</a>
+      </article>
+      <article class="plan pop">
+        <div class="hd"><h3>Pro</h3><span class="popb">POPULAR</span></div>
+        <div class="price" data-m="€16" data-y="€160"><span class="amt">€16</span><small class="per"> / month</small></div>
+        <div class="sub" data-m="Billed monthly, excl. VAT" data-y="€13.33 / month, billed yearly, excl. VAT">Billed monthly, excl. VAT</div>
+        <p class="desc">For small teams running several processes.</p>
+        <ul><li>25,000 credits / month</li><li>Unlimited active workflows</li><li>3 users</li><li>Everything in Basic</li></ul>
+        <a class="btn btn-pri" href="https://app.calibraautomation.com/sign-up">Choose Pro</a>
+      </article>
+      <article class="plan">
+        <div class="hd"><h3>Team</h3></div>
+        <div class="price" data-m="€29" data-y="€290"><span class="amt">€29</span><small class="per"> / month</small></div>
+        <div class="sub" data-m="Billed monthly, excl. VAT" data-y="€24.17 / month, billed yearly, excl. VAT">Billed monthly, excl. VAT</div>
+        <p class="desc">For companies automating across departments.</p>
+        <ul><li>50,000 credits / month</li><li>Unlimited active workflows</li><li>10 users</li><li>Everything in Pro</li></ul>
+        <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Choose Team</a>
+      </article>
+    </div>
+    <div class="incl">
+      <span><strong>Every plan includes:</strong> 750+ apps · AI copilot · AI agents · MCP · HTTP and webhooks · templates</span>
+      <span><strong>Need more credits?</strong> 10,000 extra for €5, by hand or with automatic top-up. They don't expire at the end of the month.</span>
+    </div>
+    <p class="note">AI steps use your own AI provider key, so you pay the model cost directly with no markup. Upgrade, downgrade or cancel at any time. Need more than 50,000 credits or 10 users? <a href="#contact">Talk to us</a>. Prefer to have it built for you? <a href="https://studio.calibraautomation.com/">Calibra Studio</a>.</p>
+  </div>
+</section>
+
+<section class="section divider">
+  <div class="wrap">
+    <h2 style="font-size:clamp(28px,3vw,38px);text-align:center;margin-bottom:28px">Questions</h2>
+    <div class="faq">
+      <details open><summary>What counts as a credit?</summary><p>One credit for each step that works with an app or runs code, with a minimum of one per run. Routers, loops, branches and the logic and data tools (text, numbers, dates, data mapping, CSV, waits and approvals) are free.</p></details>
+      <details><summary>Do AI steps cost extra?</summary><p>AI steps, the copilot and AI agents use your own key from your AI provider, so you pay the model cost directly to them with no markup from us. Calibra also suggests cheaper models for steps that don't need an expensive one.</p></details>
+      <details><summary>Can I bring my workflows from another automation tool?</summary><p>Yes. Import them from the migration page and you get a compatibility report that shows which steps moved over and which ones need a look.</p></details>
+      <details><summary>Where is my data stored?</summary><p>On servers in Frankfurt, Germany, inside the European Union. Run data is kept for 30 days.</p></details>
+      <details><summary>Do I need a card to start?</summary><p>No. The free plan is free forever and needs no card. You only add a payment method when you choose a paid plan, and you can cancel at any time.</p></details>
+      <details><summary>Which languages does the app support?</summary><p>The app opens in English and can be switched to Spanish, German, French, Portuguese, Dutch, Japanese, Chinese and Arabic.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section divider" id="contact" style="background:radial-gradient(700px 300px at 20% 0%,rgba(124,92,255,.12),transparent 70%)">
+  <div class="wrap contact">
+    <div class="contact-copy">
+      <span class="eyebrow">Contact</span>
+      <h2 style="font-size:clamp(30px,3.4vw,44px)">Talk to us</h2>
+      <p class="lead" style="font-size:17px">Questions about plans, volume pricing or a partnership? Send us a message and we'll reply within one business day.</p>
+      <a href="mailto:info@calibraautomation.com" style="font-weight:600">info@calibraautomation.com</a>
+    </div>
+    <form id="contact-form" novalidate>
+      <input type="hidden" name="access_key" value="45efbbbc-6a64-4c8d-9a2a-cfa96accb69e">
+      <input type="hidden" name="subject" value="New message from calibraautomation.com">
+      <input type="hidden" name="from_name" value="Calibra website">
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="fld"><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="fld"><label for="c-email">Work email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="fld"><label for="c-company">Company <em>(optional)</em></label><input id="c-company" name="company" type="text" autocomplete="organization"></div>
+      <div class="fld"><label for="c-topic">Topic</label><select id="c-topic" name="topic"><option>Plans and pricing</option><option>More credits or users</option><option>Partnership</option><option>Help with my account</option><option>Something else</option></select></div>
+      <div class="fld full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+      <div class="msg" id="c-result" role="status"></div>
+      <div class="form-ft">
+        <small>We use your details only to answer your message. See our <a href="https://studio.calibraautomation.com/privacidad/">privacy policy</a>.</small>
+        <button class="btn btn-pri" type="submit" id="c-submit">Send message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="final divider">
+  <div class="wrap">
+    <h2>Describe your first process. <span class="grad">Watch it run today.</span></h2>
+    <p class="lead">Free plan, no card, no automation experience needed.</p>
+    <div class="ctas" style="justify-content:center">
+      <a class="btn btn-pri btn-lg" href="https://app.calibraautomation.com/sign-up">Start free</a>
+      <a class="btn btn-sec btn-lg" href="#contact">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="divider">
+  <div class="wrap foot">
+    <div class="col">
+      <a class="brand" href="/" aria-label="Calibra home"><img src="/marca/calibra-isotipo-gradient.svg" alt="" width="26" height="26"><img src="/marca/calibra-wordmark-light.svg" alt="calibra" width="78" height="20"></a>
+      <span style="color:var(--muted);line-height:1.6">AI employees that run your processes end to end.</span>
+    </div>
+    <div class="col"><h4>PRODUCT</h4><a href="#product">Features</a><a href="#templates">Templates</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a></div>
+    <div class="col"><h4>GET STARTED</h4><a href="https://app.calibraautomation.com/sign-up">Create a free account</a><a href="https://app.calibraautomation.com/sign-in">Log in</a><a href="#contact">Contact</a><a href="https://studio.calibraautomation.com/">Done-for-you services</a></div>
+    <div class="col"><h4>LEGAL</h4><a href="https://studio.calibraautomation.com/aviso-legal/">Legal notice</a><a href="https://app.calibraautomation.com/legal/privacidad">Privacy policy</a><a href="https://app.calibraautomation.com/legal/terminos">Terms of service</a><a href="mailto:info@calibraautomation.com">info@calibraautomation.com</a></div>
+  </div>
+  <div class="wrap legal"><span>© 2026 Calibra · Madrid, Spain</span><span>Servers in the EU · Frankfurt</span></div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile menu */
+  var burger=document.querySelector('.burger'), mnav=document.getElementById('mnav');
+  burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',String(o));});
+  mnav.addEventListener('click',function(e){if(e.target.tagName==='A'){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+
+  /* hero demo */
+  var C={mail:['#1F2A44','#8FB0FF'],ai:['#2A1F55','#C9BCFF'],sheet:['#123326','#7FE0A8'],cond:['#2B2B33','#D6D9E6'],slack:['#3A1E33','#F3A6D6'],acc:['#11313A','#7FE6F2'],wa:['#143322','#8CF56B'],cal:['#1E2D4A','#9DBBFF'],hub:['#3A2416','#FFB98A'],stripe:['#24204A','#B3A6FF']};
+  var EX=[
+    {p:'When a supplier invoice arrives by email, read it, check it against our purchase orders and create the bill in my accounting tool. Ask me before anything over €2,000.',sim:'Simulation · 6 steps · 0 errors',s:[
+      ['mail','GM','New email with attachment','Gmail · label "Invoices"'],
+      ['ai','AI','Read the invoice','Supplier, number, date, lines, VAT and total','ai','AI step'],
+      ['sheet','GS','Find the purchase order','Google Sheets · match supplier and amount'],
+      ['cond','IF','Total over €2,000?','Yes → approval · No → create the bill'],
+      ['slack','SL','Ask for approval','Slack · approve or reject in one click','you','you decide'],
+      ['acc','HD','Create the bill','Holded · PDF attached']]},
+    {p:'Answer customer WhatsApp messages, book appointments in my calendar and hand the chat to a person when the customer is upset.',sim:'Simulation · 5 steps · 0 errors',s:[
+      ['wa','WA','New WhatsApp message','WhatsApp Business · main number'],
+      ['ai','AI','Understand the request','Booking, change, question or complaint','ai','AI agent'],
+      ['cal','GC','Find a free slot','Google Calendar · opening hours only'],
+      ['cal','GC','Book and confirm','Create the event and reply on WhatsApp'],
+      ['slack','SL','Hand off if upset','Alert a person with the full conversation','you','human']]},
+    {p:'Every Monday at 8:00, pull last week’s payments from Stripe and closed deals from HubSpot, write a short summary and send it to the team.',sim:'Simulation · 5 steps · 0 errors',s:[
+      ['cond','8h','Every Monday at 08:00','Schedule · your time zone'],
+      ['stripe','ST','Get last week’s payments','Stripe · totals by product'],
+      ['hub','HS','Get closed deals','HubSpot · won and lost, by owner'],
+      ['ai','AI','Write the summary','Highlights and changes vs. last week','ai','AI step'],
+      ['slack','SL','Send it to the team','Slack #sales and email to management']]}
+  ];
+  var promptEl=document.getElementById('prompt'), stepsEl=document.getElementById('steps'), simEl=document.getElementById('sim');
+  var chips=[].slice.call(document.querySelectorAll('.chip')), typer=null;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function renderSteps(ex){
+    stepsEl.innerHTML=ex.s.map(function(s,i){
+      var tag=s[4]?'<span class="tag '+s[4]+'">'+s[5]+'</span>':'';
+      return '<li class="step" style="animation-delay:'+(reduce?0:i*90)+'ms"><div class="rail"><div class="mono" style="background:'+C[s[0]][0]+';color:'+C[s[0]][1]+'">'+s[1]+'</div><div class="line" aria-hidden="true"></div></div>'+
+        '<div class="sbody"><div><div class="stitle">'+esc(s[2])+'</div><div class="sdet">'+esc(s[3])+'</div></div>'+tag+'</div></li>';
+    }).join('');
+    simEl.textContent=ex.sim;
+  }
+  function show(i){
+    var ex=EX[i];
+    chips.forEach(function(c){c.setAttribute('aria-pressed',String(+c.dataset.ex===i));});
+    clearInterval(typer);
+    if(reduce){promptEl.textContent=ex.p;renderSteps(ex);return;}
+    var n=0; stepsEl.innerHTML=''; simEl.textContent='Building…';
+    typer=setInterval(function(){
+      n+=3; promptEl.innerHTML=esc(ex.p.slice(0,n))+'<span class="caret"></span>';
+      if(n>=ex.p.length){clearInterval(typer);promptEl.innerHTML=esc(ex.p);renderSteps(ex);}
+    },16);
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){show(+c.dataset.ex);});});
+  show(0);
+
+  /* repair demo */
+  var ra=document.getElementById('repair-a'), rb=document.getElementById('repair-b');
+  document.getElementById('approve').addEventListener('click',function(){ra.hidden=true;rb.hidden=false;});
+  document.getElementById('replay').addEventListener('click',function(){rb.hidden=true;ra.hidden=false;});
+
+  /* templates (real Calibra templates) */
+  var AV=[['rgba(124,92,255,.2)','#C9BCFF'],['rgba(37,216,238,.16)','#7FE6F2'],['rgba(255,184,107,.14)','#FFCF9A']];
+  var T=[
+    {n:'Digital employees',t:[
+      ['SA','Sales assistant that qualifies and answers every lead','Website form · AI · Google Sheets · Gmail · Slack','Every lead gets an AI score, is saved to your sheet and gets a personalized reply draft.','Drafts, you send'],
+      ['CS','Customer support agent that sorts emails and drafts replies','Gmail · AI · Slack','Every support email is classified by AI and a ready reply draft is left in Gmail.','Drafts, you send'],
+      ['BK','Bookkeeping assistant that logs supplier invoices','Gmail · AI · Google Sheets','Reads every invoice that arrives by email, extracts its data with AI and logs it for your accountant.','Fully automatic']]},
+    {n:'Finance',t:[
+      ['IV','Holded invoice for every Stripe sale','Stripe · Holded','When you get paid on Stripe, the invoice is created in Holded and sent to the customer.','Fully automatic'],
+      ['RM','Friendly overdue invoice reminders, written by AI','Holded · AI · Gmail','Every week, AI prepares a payment reminder for each of your unpaid invoices.','Weekly'],
+      ['QO','Request the receipt for every Qonto expense','Qonto · Gmail','Every expense without an attached invoice is emailed to you so you can upload it.','Fully automatic']]},
+    {n:'Sales',t:[
+      ['DL','Interested customer by email: deal and proposal for your approval','Gmail · AI · HubSpot · Approval','AI spots interested customers, creates the deal and drafts a proposal that waits for your OK.','You approve'],
+      ['TF','Typeform leads to HubSpot with a Slack alert','Typeform · HubSpot · Slack','Every response creates a contact in HubSpot and alerts the sales team.','Fully automatic'],
+      ['RE','Reply to every lead within a minute','Website form · CRM · Gmail · Telegram','Every lead goes into your CRM, gets an instant reply and the agent is notified.','Fully automatic']]},
+    {n:'Support',t:[
+      ['WA','After-hours WhatsApp support with AI','WhatsApp · AI','AI answers your customers’ frequently asked questions on WhatsApp when you’re closed.','Always on'],
+      ['RV','Reply to Google reviews with AI and your approval','Google Business · AI · Approval','AI drafts a reply to every new review, and you approve it before it’s published.','You approve'],
+      ['CL','Classify support emails with AI','Gmail · AI · Slack','AI reads every incoming email, classifies it and alerts the right team in Slack.','Fully automatic']]},
+    {n:'E-commerce',t:[
+      ['SH','Shopify order: invoice sent to the customer','Shopify · Holded','Every paid Shopify order creates its invoice and sends it to the customer.','Fully automatic'],
+      ['AC','Recover abandoned Shopify carts','Shopify · Delay · Gmail','An hour after a cart is abandoned, the customer gets an email inviting them back.','Fully automatic'],
+      ['SC','Shipping label for every Shopify order','Shopify · Sendcloud','Every paid order creates its shipment in Sendcloud with the label ready to print.','Fully automatic']]},
+    {n:'HR',t:[
+      ['RC','Recruiter that screens applications and answers every candidate','Form · AI · Google Sheets · Gmail','Every application is scored by AI against your job post, logged, and the candidate gets an instant reply.','You decide who moves on'],
+      ['ON','Welcome and onboarding tasks for every new hire','Factorial · Slack · Trello','Every new hire is announced in Slack and gets an onboarding card in Trello.','Fully automatic'],
+      ['TO','Time off on the team calendar','Personio · Slack','Every new absence is announced in the team channel so nobody is caught out.','Fully automatic']]}
+  ];
+  var tabsEl=document.getElementById('tabs'), tplEl=document.getElementById('tpls');
+  tabsEl.innerHTML=T.map(function(c,i){return '<button class="tab" role="tab" type="button" id="tab-'+i+'" aria-selected="'+(i===0)+'" data-i="'+i+'">'+c.n+'</button>';}).join('');
+  function showTab(i){
+    [].forEach.call(tabsEl.children,function(b){b.setAttribute('aria-selected',String(+b.dataset.i===i));});
+    tplEl.setAttribute('aria-labelledby','tab-'+i);
+    tplEl.innerHTML=T[i].t.map(function(t,k){
+      return '<article class="card tpl"><div class="hd"><div class="av" style="background:'+AV[k][0]+';color:'+AV[k][1]+'">'+t[0]+'</div><div><h3>'+esc(t[1])+'</h3><div class="apps">'+esc(t[2])+'</div></div></div>'+
+        '<p>'+esc(t[3])+'</p><div class="ft"><span>'+esc(t[4])+'</span><a href="https://app.calibraautomation.com/sign-up">Use template →</a></div></article>';
+    }).join('');
+  }
+  tabsEl.addEventListener('click',function(e){var b=e.target.closest('.tab');if(b)showTab(+b.dataset.i);});
+  tabsEl.addEventListener('keydown',function(e){
+    var cur=[].indexOf.call(tabsEl.children,document.activeElement); if(cur<0)return;
+    var nx=e.key==='ArrowRight'?cur+1:e.key==='ArrowLeft'?cur-1:null; if(nx===null)return;
+    nx=(nx+T.length)%T.length; tabsEl.children[nx].focus(); showTab(nx); e.preventDefault();
+  });
+  showTab(0);
+
+  /* pricing toggle */
+  var pbtns=[].slice.call(document.querySelectorAll('.toggle button'));
+  pbtns.forEach(function(b){b.addEventListener('click',function(){
+    var y=b.dataset.period==='y';
+    pbtns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+    document.querySelectorAll('.price[data-m]').forEach(function(p){p.querySelector('.amt').textContent=y?p.dataset.y:p.dataset.m;p.querySelector('.per').textContent=y?' / year':' / month';});
+    document.querySelectorAll('.sub[data-m]').forEach(function(s){s.textContent=y?s.dataset.y:s.dataset.m;});
+  });});
+
+  /* contact form → Web3Forms → info@calibraautomation.com */
+  var f=document.getElementById('contact-form'), out=document.getElementById('c-result'), btn=document.getElementById('c-submit');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=f.elements.name, mail=f.elements.email, msg=f.elements.message;
+    out.className='msg';
+    if(!name.value.trim()){name.focus();return;}
+    if(!mail.value.trim()||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value.trim())){mail.focus();return;}
+    if(!msg.value.trim()){msg.focus();return;}
+    var fd=new FormData(f);
+    fd.set('subject','Calibra website · '+f.elements.topic.value+' · '+name.value.trim());
+    fd.append('replyto',mail.value.trim());
+    btn.disabled=true; var o=btn.textContent; btn.textContent='Sending…';
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j&&j.success){out.className='msg ok';out.textContent='Thanks! Your message is on its way. We’ll reply within one business day.';f.reset();}
+        else throw new Error();
+      })
+      .catch(function(){out.className='msg err';out.innerHTML='We couldn’t send it automatically. Please email us at <a href="mailto:info@calibraautomation.com">info@calibraautomation.com</a>.';})
+      .then(function(){btn.disabled=false;btn.textContent=o;});
+  });
+})();
+</script>
+</body>
+</html>
