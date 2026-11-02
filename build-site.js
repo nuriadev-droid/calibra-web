@@ -81,15 +81,15 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Calibra
 - 85+ templates, including "digital employee" templates
 - Import workflows from other automation tools with a compatibility report
 
-## Pricing (EUR, excl. VAT)
+## Pricing (USD, excl. taxes; customers in Europe can pay in EUR)
 
-- Free: 0 EUR, 200 runs/month (1 credit = 1 run, any number of steps), 2 active workflows, 1 user
-- Basic: 8 EUR/month or 80 EUR/year, 2,000 runs, unlimited active workflows, 1 user
-- Pro: 16 EUR/month or 160 EUR/year, 5,000 runs, unlimited active workflows, 3 users
-- Team: 29 EUR/month or 290 EUR/year, 10,000 runs, unlimited active workflows, 10 users
-- Extra runs: 2,000 for 5 EUR
-- One credit per step that works with an app; logic, data, waits and approvals are free.
-- AI steps use the customer's own AI provider key, with no markup.
+- Free: $0, 200 runs/month (1 credit = 1 run, any number of steps), 2 active workflows, 1 user
+- Basic: $9/month or $90/year, 2,000 runs, unlimited active workflows, 1 user
+- Pro: $19/month or $190/year, 5,000 runs, unlimited active workflows, 3 users
+- Team: $35/month or $350/year, 10,000 runs, unlimited active workflows, 10 users
+- Extra runs: 2,000 for $6
+- One credit per workflow run, however many steps it has.
+- AI steps can use the AI included in Calibra or the customer's own provider key, with no markup.
 
 ## Done-for-you services
 
