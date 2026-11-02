@@ -77,17 +77,17 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Calibra
 > cheaper-model suggestions for AI steps; and see hours saved and net value per workflow.
 
 - App: https://app.calibraautomation.com/
-- 750+ apps, 2,500+ public APIs via OpenAPI, AI agents, MCP, webhooks and code steps
+- 1,100+ apps, 2,500+ public APIs via OpenAPI, AI agents, MCP, webhooks and code steps
 - 85+ templates, including "digital employee" templates
 - Import workflows from other automation tools with a compatibility report
 
 ## Pricing (EUR, excl. VAT)
 
-- Free: 0 EUR, 1,000 credits/month, 2 active workflows, 1 user
-- Basic: 8 EUR/month or 80 EUR/year, 10,000 credits, unlimited active workflows, 1 user
-- Pro: 16 EUR/month or 160 EUR/year, 25,000 credits, unlimited active workflows, 3 users
-- Team: 29 EUR/month or 290 EUR/year, 50,000 credits, unlimited active workflows, 10 users
-- Extra credits: 10,000 for 5 EUR
+- Free: 0 EUR, 200 runs/month (1 credit = 1 run, any number of steps), 2 active workflows, 1 user
+- Basic: 8 EUR/month or 80 EUR/year, 2,000 runs, unlimited active workflows, 1 user
+- Pro: 16 EUR/month or 160 EUR/year, 5,000 runs, unlimited active workflows, 3 users
+- Team: 29 EUR/month or 290 EUR/year, 10,000 runs, unlimited active workflows, 10 users
+- Extra runs: 2,000 for 5 EUR
 - One credit per step that works with an app; logic, data, waits and approvals are free.
 - AI steps use the customer's own AI provider key, with no markup.
 
