@@ -91,6 +91,8 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Calibra
 - AI: included AI or your own key with no markup, agents with app and MCP tools, use Calibra from Claude or other MCP assistants; money-moving actions never run from AI assistants or agents
 - Agencies: white label, client workspaces with credit budgets, private team templates with install links, cost tags, partner program (40% recurring for 12 months, up to 50%)
 - Trust center: https://app.calibraautomation.com/trust
+- Integrations directory (one page per app with its triggers and actions): https://calibraautomation.com/integrations/
+- Templates directory: https://calibraautomation.com/templates/
 
 ## Pricing (USD, excl. taxes; customers in Europe can pay in EUR)
 
