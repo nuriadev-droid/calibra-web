@@ -78,8 +78,16 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Calibra
 
 - App: https://app.calibraautomation.com/
 - 1,100+ apps, 2,500+ public APIs via OpenAPI, AI agents, MCP, webhooks and code steps
-- 85+ templates, including "digital employee" templates
+- 95+ templates, including "digital employee" templates
 - Import workflows from other automation tools with a compatibility report
+- Shadow mode: run imported workflows on real events next to the current tool, with sending, writing and charging steps simulated, plus a savings estimate
+- One credit per run, however many steps it has (one extra credit per further 100 steps)
+- Testing: whole-flow simulation, AI-generated test cases and load tests
+- Teams: test and production environments with promotion preview, GitHub sync, version compare and restore, custom roles, publish approvals, audit log, reusable modules, shared connections
+- Reliability: execution ledger, webhook deduplication by idempotency key, retry from the failed step, automatic retries, connection health warnings, public status page with 90-day uptime
+- AI: included AI or your own key with no markup, agents with app and MCP tools, use Calibra from Claude or other MCP assistants; money-moving actions never run from AI assistants or agents
+- Agencies: white label, client workspaces with credit budgets, private team templates with install links, cost tags, partner program (40% recurring for 12 months, up to 50%)
+- Trust center: https://app.calibraautomation.com/trust
 
 ## Pricing (USD, excl. taxes; customers in Europe can pay in EUR)
 

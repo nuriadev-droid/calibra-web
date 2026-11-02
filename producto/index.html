@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Calibra — AI employees that run your processes end to end</title>
-<meta name="description" content="Describe a process in plain words and Calibra builds the workflow, simulates it before it goes live, proposes fixes when something breaks and shows what every automation saves. 1,100+ apps. Free plan.">
+<meta name="description" content="Describe a process and Calibra builds the workflow, tests it before it goes live, proposes fixes when something breaks and shows what it earns you. One credit per run, any number of steps. 1,100+ apps. Free plan.">
+<script>document.documentElement.classList.add("js")</script>
 <script>if(/^#\/./.test(location.hash)){location.replace("https://studio.calibraautomation.com/"+location.hash.slice(2).replace(/\/?$/,"/"));}</script>
 <link rel="canonical" href="https://calibraautomation.com/">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
@@ -12,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Calibra">
 <meta property="og:title" content="Calibra — AI employees that run your processes end to end">
-<meta property="og:description" content="Describe it. Calibra builds it, tests it, fixes it with your OK and shows what it saves. 1,100+ apps, free plan, data hosted in the EU.">
+<meta property="og:description" content="Describe it. Calibra builds it, tests it on real events, fixes it with your OK and shows what it earns. One credit per run, 1,100+ apps, free plan, data hosted in the EU.">
 <meta property="og:url" content="https://calibraautomation.com/">
 <meta property="og:image" content="https://calibraautomation.com/assets/og-product.png">
 <meta property="og:image:width" content="1200">
@@ -255,6 +256,113 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
 .foot .col{display:flex;flex-direction:column;gap:10px}
 .foot .col a{color:var(--ink2)}.foot .col a:hover{color:#fff}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;padding-bottom:36px;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:var(--muted)}
+
+/* v2: stats band */
+.stats{background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.stats .wrap{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+.stat{padding:30px 18px;display:flex;flex-direction:column;gap:6px;border-left:1px solid rgba(255,255,255,.06)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font:800 clamp(26px,2.6vw,34px)/1 var(--display);letter-spacing:-.03em}
+.stat span{font-size:13.5px;color:var(--muted);line-height:1.4}
+@media (max-width:1000px){.stats .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}.stat:nth-child(4){border-left:0;padding-left:0}.stat:nth-child(n+4){border-top:1px solid rgba(255,255,255,.06)}}
+@media (max-width:560px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.06)}.stat:nth-child(-n+2){border-top:0}.stat:nth-child(even){padding-left:16px;border-left:1px solid rgba(255,255,255,.06)}}
+
+/* v2: section head with side copy */
+.split-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px}
+.split-head .section-head{margin:0}
+.kicker{font-size:15px;color:var(--ink2);max-width:380px;line-height:1.6;margin:0}
+.new{font:600 10.5px var(--mono);letter-spacing:.06em;color:#05060B;background:var(--lime);border-radius:5px;padding:2px 6px;vertical-align:3px;margin-left:8px}
+
+/* v2: calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc-in{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:32px;display:flex;flex-direction:column;gap:28px}
+.rng{display:flex;flex-direction:column;gap:12px}
+.rng-hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.rng-hd label{font-size:15px;font-weight:600}
+.rng-hd output{font:700 22px var(--display);letter-spacing:-.02em}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:999px;background:linear-gradient(90deg,#8B6BFF,#25D8EE) 0/var(--p,50%) 100% no-repeat,rgba(255,255,255,.1);border:0;padding:0;min-height:0;cursor:pointer}
+input[type=range]:focus{outline:none}
+input[type=range]:focus-visible{outline:2px solid var(--cyan);outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:4px solid #7A7DFF;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid #7A7DFF}
+.rng small{font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between}
+.calc-out{border:1px solid rgba(168,148,255,.35);border-radius:22px;background:linear-gradient(180deg,rgba(124,92,255,.12),rgba(10,11,18,.9) 70%);padding:32px;display:flex;flex-direction:column;gap:20px}
+.meter{display:flex;flex-direction:column;gap:8px}
+.meter-hd{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--ink2)}
+.meter-hd b{font:700 18px var(--display);color:var(--ink)}
+.track{height:12px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+.track i{display:block;height:100%;border-radius:999px;transition:width .35s ease}
+.track .old{background:rgba(255,255,255,.28)}
+.track .us{background:var(--grad)}
+.verdict{border-top:1px dashed rgba(255,255,255,.12);padding-top:20px;display:flex;flex-direction:column;gap:6px}
+.verdict .big{font:800 clamp(30px,3.4vw,42px)/1.05 var(--display);letter-spacing:-.03em}
+.verdict>span{color:var(--ink2);font-size:15px}
+.fine{font-size:12.5px;color:var(--muted);line-height:1.55;margin:0}
+
+/* v2: feature tiles with mini visuals */
+.tile{padding:26px;display:flex;flex-direction:column;gap:12px}
+.tile h3{font-size:19px;font-weight:700;letter-spacing:-.02em}
+.tile p{margin:0;font-size:15px;line-height:1.6;color:var(--ink2)}
+.tile .ic{width:40px;height:40px;border-radius:11px}
+.pipe{display:flex;align-items:center;gap:0;flex-wrap:wrap;border:1px solid var(--line);border-radius:18px;background:#0B0C14;padding:18px;margin-bottom:22px}
+.pipe .node{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:14px;font-weight:600;white-space:nowrap}
+.pipe .node em{font:500 11.5px var(--mono);font-style:normal;color:var(--muted)}
+.pipe .arrow{flex:1 1 24px;min-width:24px;height:2px;background:linear-gradient(90deg,rgba(124,92,255,.6),rgba(37,216,238,.5));position:relative;margin:0 4px}
+.pipe .arrow:after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(37,216,238,.8);border-right:0}
+.dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px}
+@media (max-width:720px){.pipe{flex-direction:column;align-items:stretch}.pipe .arrow{width:2px;height:16px;flex:0 0 16px;margin:4px auto;background:linear-gradient(180deg,rgba(124,92,255,.6),rgba(37,216,238,.5))}.pipe .arrow:after{right:-4px;top:auto;bottom:-1px;border:5px solid transparent;border-top-color:rgba(37,216,238,.8);border-bottom:0}}
+
+/* v2: two-column feature + panel */
+.feat2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.feat2.rev{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.feat2.rev .f-copy{order:2}
+@media (max-width:960px){.feat2,.feat2.rev{grid-template-columns:1fr;gap:36px}.feat2.rev .f-copy{order:0}}
+.f-copy{display:flex;flex-direction:column;gap:18px}
+.f-list{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:16px}
+.f-list li{display:flex;gap:14px;align-items:flex-start}
+.f-list .num{flex:0 0 30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font:600 12px var(--mono);background:rgba(124,92,255,.14);color:#C9BCFF}
+.f-list strong{display:block;font-size:16px;margin-bottom:2px}
+.f-list span{font-size:15px;color:var(--ink2);line-height:1.6}
+
+/* v2: shadow report */
+.rep-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14.5px}
+.rep-row:last-child{border-bottom:0}
+.rep-row b{font:700 16px var(--display)}
+.bar2{display:flex;height:10px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.06)}
+.bar2 i{display:block;height:100%}
+
+/* v2: ledger */
+.led{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.led li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);font-size:14px}
+.led .n{font:600 12px var(--mono);color:var(--muted)}
+.led .d{color:var(--muted);font-size:12.5px;display:block}
+.pill2{font:600 11px var(--mono);border-radius:6px;padding:4px 8px;white-space:nowrap}
+.p-read{color:#9DBBFF;background:rgba(92,140,255,.14)}
+.p-write{color:#FFCF9A;background:rgba(255,184,107,.13)}
+.p-skip{color:#8CF56B;background:rgba(140,245,107,.12)}
+.p-block{color:#FFB4B4;background:rgba(255,120,120,.12)}
+
+/* v2: chat */
+.chat{display:flex;flex-direction:column;gap:12px}
+.bub{max-width:88%;padding:12px 15px;border-radius:16px;font-size:14.5px;line-height:1.55}
+.bub.me{align-self:flex-end;background:rgba(124,92,255,.2);border:1px solid rgba(168,148,255,.35);border-bottom-right-radius:6px}
+.bub.bot{align-self:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-bottom-left-radius:6px}
+.bub .who{display:block;font:600 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.bub ul{margin:6px 0 0;padding-left:18px}
+
+/* v2: agency board */
+.clients{display:flex;flex-direction:column;gap:8px}
+.cl{display:grid;grid-template-columns:36px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px;border-radius:12px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);font-size:14px}
+.cl .av{width:36px;height:36px;flex-basis:36px;font-size:12px;border-radius:10px}
+.cl .m{font:600 13px var(--mono);color:var(--ink2);text-align:right}
+@media (max-width:480px){.cl{grid-template-columns:36px minmax(0,1fr) auto}.cl .hide-s{display:none}}
+
+/* v2: reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -268,10 +376,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
     </a>
     <nav class="links" aria-label="Main">
       <a href="#product">Product</a>
-      <a href="#templates">Templates</a>
+      <a href="#teams">For teams</a>
+      <a href="#agencies">For agencies</a>
       <a href="#integrations">Integrations</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
       <a href="/partners/">Partners</a>
     </nav>
     <div class="nav-cta">
@@ -283,7 +391,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
     </div>
   </div>
   <nav class="mnav" id="mnav" aria-label="Mobile">
-    <a href="#product">Product</a><a href="#templates">Templates</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="/partners/">Partners</a><a href="https://app.calibraautomation.com/sign-in">Log in</a>
+    <a href="#product">Product</a><a href="#switch">Switch without risk</a><a href="#teams">For teams</a><a href="#agencies">For agencies</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a><a href="/partners/">Partners</a><a href="#contact">Contact</a><a href="https://app.calibraautomation.com/sign-in">Log in</a>
   </nav>
 </header>
 
@@ -292,17 +400,17 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <span class="pill"><b>NEW</b>Build a workflow by describing it in plain words</span>
+      <span class="pill"><b>NEW</b>Shadow mode: try Calibra on your real events before you switch</span>
       <h1>Hire <span class="grad">AI employees</span> that run your processes end to end.</h1>
-      <p class="lead">Describe a process in plain words. Calibra builds the workflow, lets you simulate it before it goes live, proposes the fix when something breaks and shows you exactly what it saves.</p>
+      <p class="lead">Describe a process in plain words. Calibra builds the workflow, tests it before it goes live, proposes the fix when something breaks and shows exactly what it earns you. And you pay per run, not per step.</p>
       <div class="ctas">
-        <a class="btn btn-pri btn-lg" href="https://app.calibraautomation.com/sign-up">Start free — no card needed</a>
+        <a class="btn btn-pri btn-lg" href="https://app.calibraautomation.com/sign-up">Start free, no card needed</a>
         <a class="btn btn-sec btn-lg" href="#how"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg>See how it works</a>
       </div>
       <div class="proof">
         <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free plan forever</span>
+        <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>One credit per run, any number of steps</span>
         <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Data hosted in the EU</span>
-        <span class="check"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Export every workflow</span>
       </div>
     </div>
 
@@ -329,50 +437,54 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
   </div>
 </section>
 
-<section class="strip" aria-label="Integrations">
+<section class="stats" aria-label="Calibra in numbers">
   <div class="wrap">
-    <div style="color:var(--ink2);font-size:14px"><strong>1,100+ apps</strong> &nbsp;connected out of the box</div>
-    <div class="names"><span>Gmail</span><span>Outlook</span><span>Google Sheets</span><span>Slack</span><span>WhatsApp</span><span>HubSpot</span><span>Stripe</span><span>Shopify</span><span>Holded</span><span>Notion</span><span>Airtable</span><span>Teams</span></div>
+    <div class="stat"><b class="grad">1,100+</b><span>apps built in, ready to connect</span></div>
+    <div class="stat"><b>2,500+</b><span>public APIs ready to call, plus any OpenAPI spec</span></div>
+    <div class="stat"><b>35,000+</b><span>MCP servers your AI agents can use</span></div>
+    <div class="stat"><b>95+</b><span>ready-made workflows and digital employees</span></div>
+    <div class="stat"><b>1</b><span>credit per run, whether it has 3 steps or 60</span></div>
+    <div class="stat"><b>$0</b><span>to start, with a free plan that never expires</span></div>
   </div>
 </section>
 
 <section class="section" id="product">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head rv">
       <span class="eyebrow">Not another workflow builder</span>
-      <h2>Automation that builds, tests and repairs itself. You stay in charge.</h2>
-      <p class="lead">Everything you expect from a visual automation platform, plus the part that usually eats your week: building, testing, fixing and proving it was worth it.</p>
+      <h2>Everything you expect from automation. <span class="grad">Then everything it never did.</span></h2>
+      <p class="lead">A visual editor, 1,100+ apps, webhooks and code, like any serious platform. Plus the work that usually eats your week: building, testing, fixing and proving it was worth it.</p>
     </div>
     <div class="g3">
-      <article class="card feature">
-        <div class="ic" style="background:rgba(124,92,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9BCFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Describe it. Calibra builds it.</h3>
-        <p>Write what should happen in plain words. The AI copilot picks the apps, builds the steps, validates them and leaves a workflow ready for you to review.</p>
+      <article class="card feature rv">
+        <div class="ic" style="background:rgba(124,92,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9BCFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
+        <h3>Describe it, or just say it</h3>
+        <p>Type or speak what should happen. The copilot picks the apps, builds and validates every step, explains any workflow in plain words and reviews it before you publish.</p>
       </article>
-      <article class="card feature">
-        <div class="ic" style="background:rgba(92,140,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DBBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
-        <h3>Simulate before it goes live</h3>
-        <p>Run the whole workflow as a simulation and get a step-by-step report of what each step would do, before anything real is sent or written.</p>
+      <article class="card feature rv">
+        <div class="ic" style="background:rgba(92,140,255,.16)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DBBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3"/><line x1="7" y1="15" x2="17" y2="15"/></svg></div>
+        <h3>Tested before it touches a customer</h3>
+        <p>Simulate the whole workflow without sending anything. Let AI write test cases from your real sample data, run them in one click, and load-test with parallel runs before launch.</p>
       </article>
-      <article class="card feature">
+      <article class="card feature rv">
         <div class="ic" style="background:rgba(37,216,238,.14)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FE6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
         <h3>Fixes proposed, you approve</h3>
-        <p>When a run fails, Calibra diagnoses the error in plain words and proposes the exact change to the failing step. Nothing changes until you accept it.</p>
+        <p>When a run fails, Calibra explains the error in plain words and prepares the exact change. Accept it, then retry from the failed step so the steps that worked aren't repeated.</p>
       </article>
-      <article class="card feature">
-        <div class="ic" style="background:rgba(140,245,107,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8F58E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Stop overpaying for AI</h3>
-        <p>Use your own AI key with no markup. Calibra spots AI steps running on an expensive model and suggests a cheaper one that does the job.</p>
+      <article class="card feature rv">
+        <div class="ic" style="background:rgba(140,245,107,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8F58E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6-4.6-1.9 4.6-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div>
+        <h3>AI included, or bring your own key</h3>
+        <p>Use the AI built into Calibra, or plug in your own provider key and pay the model directly with zero markup. Calibra flags AI steps that could run on a cheaper model.</p>
       </article>
-      <article class="card feature">
+      <article class="card feature rv">
+        <div class="ic" style="background:rgba(243,166,214,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3A6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Formulas and code, written for you</h3>
+        <p>Need to reshape data? Say what you want, such as "join first and last name and keep only active customers", and get the formula or code step ready to run.</p>
+      </article>
+      <article class="card feature rv">
         <div class="ic" style="background:rgba(255,184,107,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCF9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <h3>See what every workflow is worth</h3>
-        <p>Tell Calibra what an hour of that work costs you. It shows hours saved, what the runs cost and the net value of each workflow.</p>
-      </article>
-      <article class="card feature">
-        <div class="ic" style="background:rgba(243,166,214,.12)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3A6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div>
-        <h3>Move in from any tool</h3>
-        <p>Already automating somewhere else? Import your existing workflows and get a compatibility report that shows what moved over and what needs a look.</p>
+        <h3>See what every workflow earns</h3>
+        <p>Hours saved, cost of runs and net value per workflow. Tag workflows by client or department and get a cost report for each tag.</p>
       </article>
     </div>
   </div>
@@ -387,6 +499,81 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
       <li style="border-color:#5C8CFF"><span class="n" style="color:#8FB0FF">03 · RUN</span><strong>Switch it on</strong><span>It runs on its own, waits for your approval where you decide, and keeps a full history of every run.</span></li>
       <li style="border-color:#25D8EE"><span class="n" style="color:#25D8EE">04 · IMPROVE</span><strong>Keep it healthy</strong><span>Get a fix proposal when something fails, cheaper-model suggestions for AI steps and a clear view of the value created.</span></li>
     </ol>
+  </div>
+</section>
+
+<section class="section divider" id="value" style="background:radial-gradient(800px 360px at 80% 0%,rgba(37,216,238,.07),transparent 70%)">
+  <div class="wrap">
+    <div class="split-head rv">
+      <div class="section-head" style="max-width:720px">
+        <span class="eyebrow">Pay per run, not per step</span>
+        <h2>Bigger workflows shouldn't cost more.</h2>
+        <p class="lead">Many automation tools bill every step a workflow takes, so each filter, lookup or extra app pushes up your bill. On Calibra a run is one credit, however many steps it has.</p>
+      </div>
+      <p class="kicker">Move the sliders to see how much a per-step meter adds up for your own volume.</p>
+    </div>
+    <div class="calc rv">
+      <div class="calc-in">
+        <div class="rng">
+          <div class="rng-hd"><label for="r-runs">Workflow runs per month</label><output id="o-runs" for="r-runs">2,000</output></div>
+          <input id="r-runs" type="range" min="0" max="100" step="1" value="42" aria-describedby="o-runs">
+          <small><span>200</span><span>50,000</span></small>
+        </div>
+        <div class="rng">
+          <div class="rng-hd"><label for="r-steps">Steps in each workflow</label><output id="o-steps" for="r-steps">6</output></div>
+          <input id="r-steps" type="range" min="2" max="30" step="1" value="6" aria-describedby="o-steps">
+          <small><span>2</span><span>30</span></small>
+        </div>
+        <p class="fine">A typical business workflow has 5 to 10 steps: a trigger, a lookup, a filter, an AI step, a couple of app updates and a notification.</p>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <div class="meter">
+          <div class="meter-hd"><span>Billed per step</span><b id="c-old">10,000 operations</b></div>
+          <div class="track"><i class="old" id="t-old" style="width:100%"></i></div>
+        </div>
+        <div class="meter">
+          <div class="meter-hd"><span>Billed per run on Calibra</span><b id="c-us">2,000 credits</b></div>
+          <div class="track"><i class="us" id="t-us" style="width:17%"></i></div>
+        </div>
+        <div class="verdict">
+          <div class="big"><span class="grad" id="c-x">5×</span> fewer billable units</div>
+          <span id="c-plan">Fits the Basic plan: $9 a month.</span>
+        </div>
+        <p class="fine">Per-step count assumes every step after the trigger is billed, as on step-based plans. On Calibra, runs longer than 100 steps use one extra credit for every further 100 steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="switch">
+  <div class="wrap feat2">
+    <div class="f-copy rv">
+      <span class="eyebrow iris">Switch without risk<span class="new">NEW</span></span>
+      <h2>Prove it on your real events, then switch.</h2>
+      <p class="lead">Changing automation platforms used to mean rebuilding everything and hoping it behaves. Calibra lets you check every workflow side by side first, with nothing duplicated.</p>
+      <ol class="f-list">
+        <li><span class="num">01</span><div><strong>Import what you already have</strong><span>Bring your existing workflows in and get a compatibility report, refined with AI, of what moved over and what needs a look.</span></div></li>
+        <li><span class="num">02</span><div><strong>Run it in shadow mode</strong><span>Calibra processes the same live events while your current tool keeps working. Steps that send, write or charge return sample data, so nothing happens twice.</span></div></li>
+        <li><span class="num">03</span><div><strong>Compare, then go live</strong><span>Get a report of matching and differing results, plus a savings estimate built from your real volume. Switch when the numbers agree.</span></div></li>
+      </ol>
+    </div>
+    <div class="window rv" aria-label="Example shadow mode report">
+      <div class="wbar"><i></i><i></i><i></i><span style="margin-left:10px">Shadow report · Supplier invoices · last 7 days</span></div>
+      <div class="wbody">
+        <div class="kpis"><div><span>Live events</span><strong>412</strong></div><div><span>Same result</span><strong style="color:var(--lime)">409</strong></div><div><span>To review</span><strong style="color:var(--amber)">3</strong></div></div>
+        <div class="bar2" aria-hidden="true"><i style="width:99.3%;background:var(--grad)"></i><i style="width:.7%;background:#FFB86B"></i></div>
+        <div>
+          <div class="rep-row"><span>Steps that would have sent or written</span><b>1,236 <span style="font:500 12px var(--mono);color:var(--muted)">simulated</span></b></div>
+          <div class="rep-row"><span>Emails sent to customers by Calibra</span><b>0</b></div>
+          <div class="rep-row"><span>Difference found</span><span style="font-size:13.5px;color:var(--ink2)">VAT rounded to 2 decimals, not 4</span></div>
+        </div>
+        <div class="built" style="border-top-style:solid">
+          <strong><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8CF56B" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Savings estimate from your real volume</strong>
+          <span class="ok">Ready to go live</span>
+        </div>
+        <div style="font:500 12px var(--mono);color:var(--muted)">Example data</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -428,13 +615,72 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
   </div>
 </section>
 
+<section class="section divider" id="teams">
+  <div class="wrap">
+    <div class="split-head rv">
+      <div class="section-head" style="max-width:740px">
+        <span class="eyebrow">Built for teams that ship</span>
+        <h2>Change live workflows the way software teams change code.</h2>
+        <p class="lead">No more editing production on a Friday and hoping. Test, review, approve and roll out, with a record of every change.</p>
+      </div>
+    </div>
+    <div class="pipe rv" aria-label="Example release path">
+      <div class="node"><span class="dot" style="background:#A894FF"></span>Test workspace <em>v14</em></div>
+      <div class="arrow" aria-hidden="true"></div>
+      <div class="node"><span class="dot" style="background:#7FA6FF"></span>AI test cases <em>6/6 passed</em></div>
+      <div class="arrow" aria-hidden="true"></div>
+      <div class="node"><span class="dot" style="background:#FFCF9A"></span>Approval <em>by ops lead</em></div>
+      <div class="arrow" aria-hidden="true"></div>
+      <div class="node"><span class="dot" style="background:#8CF56B"></span>Production <em>promoted with preview</em></div>
+    </div>
+    <div class="g3">
+      <article class="card tile rv"><div class="ic" style="background:rgba(124,92,255,.16)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9BCFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14"/></svg></div><h3>Test and production environments</h3><p>Link a test workspace to production and promote changes with a preview of exactly what will change before it does.</p></article>
+      <article class="card tile rv"><div class="ic" style="background:rgba(92,140,255,.16)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9DBBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7"/><path d="M18 11.5c0 3-3 3.5-6 4.5"/></svg></div><h3>GitHub sync</h3><p>Push workflows to a repository and deploy them from GitHub, with a preview first and signed webhooks for every deployment.</p></article>
+      <article class="card tile rv"><div class="ic" style="background:rgba(37,216,238,.14)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FE6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><polyline points="3 3 3 8 8 8"/><polyline points="12 7 12 12 15 14"/></svg></div><h3>Compare versions, restore in a click</h3><p>See what changed between any two versions, step by step, and bring back the one that worked.</p></article>
+      <article class="card tile rv"><div class="ic" style="background:rgba(255,184,107,.12)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCF9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><h3>Roles and publish approvals</h3><p>Create custom roles, decide who can edit and who can publish, and route changes to an approvals inbox before they go live.</p></article>
+      <article class="card tile rv"><div class="ic" style="background:rgba(140,245,107,.12)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8F58E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></div><h3>Reusable modules</h3><p>Build a piece of logic once and reuse it across workflows. Share private team templates, install them with a link, and work with an open flow format and a documented API.</p></article>
+      <article class="card tile rv"><div class="ic" style="background:rgba(243,166,214,.12)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3A6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div><h3>Audit log and shared connections</h3><p>See who changed what and when. Share a connection with other workspaces with "use" or "manage" permission, so secrets stay with the people who own them.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reliability" style="padding-top:40px">
+  <div class="wrap feat2 rev">
+    <div class="f-copy rv">
+      <span class="eyebrow">Reliability you can check</span>
+      <h2>Know what ran, what changed, and what didn't.</h2>
+      <p class="lead">Every run leaves a clear record, so a failure never turns into guesswork about what reached your customers.</p>
+      <ol class="f-list">
+        <li><span class="num">01</span><div><strong>Execution ledger</strong><span>Each run shows which steps only read data and which made, or may have made, a change.</span></div></li>
+        <li><span class="num">02</span><div><strong>No double processing</strong><span>Repeats of a webhook with the same idempotency key within 24 hours are skipped, so the workflow runs once.</span></div></li>
+        <li><span class="num">03</span><div><strong>Problems caught before they hit</strong><span>Warnings before credentials expire and when an app's API looks like it changed. Automatic retries, error workflows and fallback outputs keep runs moving.</span></div></li>
+        <li><span class="num">04</span><div><strong>Public status, honestly reported</strong><span>Every component is checked every 5 minutes, with 90 days of uptime and incidents on the <a href="https://app.calibraautomation.com/status">status page</a>.</span></div></li>
+      </ol>
+    </div>
+    <div class="window rv" aria-label="Example execution ledger">
+      <div class="wbar"><i></i><i></i><i></i><span style="margin-left:10px">Run #18,204 · New order to invoice</span></div>
+      <div class="wbody">
+        <ol class="led">
+          <li><span class="n">01</span><span>Webhook received<span class="d">Idempotency-Key ord_8841</span></span><span class="pill2 p-read">READ</span></li>
+          <li><span class="n">02</span><span>Find customer<span class="d">CRM · matched by email</span></span><span class="pill2 p-read">READ</span></li>
+          <li><span class="n">03</span><span>Create invoice<span class="d">Accounting · INV-2026-0412</span></span><span class="pill2 p-write">CHANGED</span></li>
+          <li><span class="n">04</span><span>Email the customer<span class="d">Sent with PDF attached</span></span><span class="pill2 p-write">CHANGED</span></li>
+          <li><span class="n">05</span><span>Same webhook again, 4 s later<span class="d">Duplicate request skipped</span></span><span class="pill2 p-skip">SKIPPED</span></li>
+        </ol>
+        <div class="built"><strong>1 invoice, 1 email, 0 duplicates</strong><span class="ok">Success</span></div>
+        <div style="font:500 12px var(--mono);color:var(--muted)">Example data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section divider" id="templates" style="background:linear-gradient(180deg,rgba(124,92,255,.05),rgba(5,6,11,0))">
   <div class="wrap">
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px">
-      <div class="section-head" style="margin:0;max-width:700px">
+      <div class="section-head rv" style="margin:0;max-width:700px">
         <span class="eyebrow iris">Digital employees &amp; templates</span>
         <h2>Don't start from a blank canvas. Hire a digital employee.</h2>
-        <p class="lead">85+ ready-made workflows, including AI employees that own a whole process. Connect your apps, adjust the rules and switch them on.</p>
+        <p class="lead">95+ ready-made workflows, including AI employees that own a whole process. Connect your apps, adjust the rules and switch them on.</p>
       </div>
       <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Browse all templates</a>
     </div>
@@ -443,22 +689,80 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
   </div>
 </section>
 
+<section class="section" id="ai">
+  <div class="wrap feat2">
+    <div class="f-copy rv">
+      <span class="eyebrow iris">AI with guardrails</span>
+      <h2>AI agents that do real work, inside rules you set.</h2>
+      <p class="lead">Give an agent a goal and the tools it may use. Calibra keeps it honest: every action is logged, sensitive steps wait for a person, and money never moves on an AI's say-so.</p>
+      <ol class="f-list">
+        <li><span class="num">01</span><div><strong>Agents with real tools</strong><span>Any of the 1,100+ apps, any API, and MCP servers become tools an agent can use inside a workflow.</span></div></li>
+        <li><span class="num">02</span><div><strong>Run Calibra from your AI assistant</strong><span>Connect Calibra to Claude or any assistant that supports MCP, then build, test and fix workflows by chatting.</span></div></li>
+        <li><span class="num">03</span><div><strong>Money stays with humans</strong><span>Payments, refunds, payouts and transfers never run from an AI assistant or agent. A person runs those steps.</span></div></li>
+        <li><span class="num">04</span><div><strong>Confidential when it matters</strong><span>Mark a workflow as confidential and the data of each run is deleted about a minute and a half after it finishes.</span></div></li>
+      </ol>
+    </div>
+    <div class="window rv" aria-label="Example conversation with Calibra from an AI assistant">
+      <div class="wbar"><i></i><i></i><i></i><span style="margin-left:10px">Your AI assistant · Calibra connected</span></div>
+      <div class="wbody chat">
+        <div class="bub me">When a customer asks for a refund by email, check the order in Shopify, draft a reply and refund it.</div>
+        <div class="bub bot"><span class="who">CALIBRA</span>Built "Refund requests" with 5 steps and ran a simulation: 0 errors.
+          <ul><li>Reads the email and finds the order</li><li>Drafts the reply for your review</li><li>Refund step added, but it only runs when a person approves it</li></ul>
+        </div>
+        <div class="bub me">Can you just issue the refunds yourself?</div>
+        <div class="bub bot"><span class="who">CALIBRA</span><span class="pill2 p-block">BLOCKED</span>&nbsp; Refunds move money, so I never run them from an assistant. You'll get an approval request for each one.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section divider" id="agencies" style="background:linear-gradient(180deg,rgba(37,216,238,.04),rgba(5,6,11,0))">
+  <div class="wrap feat2 rev">
+    <div class="f-copy rv">
+      <span class="eyebrow">For agencies and consultants</span>
+      <h2>Run every client from one place, under your brand.</h2>
+      <p class="lead">Calibra was built to be resold. Give each client their own workspace, put your logo on it, and see at a glance which accounts are healthy and what each one earns you.</p>
+      <ol class="f-list">
+        <li><span class="num">01</span><div><strong>White label</strong><span>Your name, logo and colours on the app and on public forms, for the whole platform or per client.</span></div></li>
+        <li><span class="num">02</span><div><strong>Client workspaces with budgets</strong><span>A monthly credit budget and a failure alert per client, plus what you charge them, so your margin is always visible.</span></div></li>
+        <li><span class="num">03</span><div><strong>Package once, install everywhere</strong><span>Turn a solution into a private template and install it for the next client with a link.</span></div></li>
+        <li><span class="num">04</span><div><strong>Earn on every referral</strong><span>Our <a href="/partners/">partner program</a> pays 40% of every payment for 12 months, up to 50% as you grow.</span></div></li>
+      </ol>
+    </div>
+    <div class="window rv" aria-label="Example agency dashboard">
+      <div class="wbar"><i></i><i></i><i></i><span style="margin-left:10px">Agency · Clients this month</span></div>
+      <div class="wbody">
+        <div class="kpis"><div><span>Clients</span><strong>12</strong></div><div><span>Runs</span><strong>48,310</strong></div><div><span>Your margin</span><strong style="color:var(--lime)">$2,840</strong></div></div>
+        <div class="clients">
+          <div class="cl"><div class="av" style="background:rgba(124,92,255,.2);color:#C9BCFF">NB</div><span>Northwind Bakery<span class="d" style="display:block;font-size:12.5px;color:var(--muted)">14 workflows</span></span><span class="m hide-s">62% of budget</span><span class="pill2 p-skip">HEALTHY</span></div>
+          <div class="cl"><div class="av" style="background:rgba(37,216,238,.16);color:#7FE6F2">LF</div><span>Lumen Fitness<span class="d" style="display:block;font-size:12.5px;color:var(--muted)">9 workflows</span></span><span class="m hide-s">41% of budget</span><span class="pill2 p-skip">HEALTHY</span></div>
+          <div class="cl"><div class="av" style="background:rgba(255,184,107,.14);color:#FFCF9A">OL</div><span>Orbit Legal<span class="d" style="display:block;font-size:12.5px;color:var(--muted)">6 workflows</span></span><span class="m hide-s">93% of budget</span><span class="pill2 p-write">WATCH</span></div>
+        </div>
+        <div style="font:500 12px var(--mono);color:var(--muted)">Example data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head rv">
       <span class="eyebrow">The old way vs. Calibra</span>
       <h2>You shouldn't need an automation expert to automate.</h2>
     </div>
-    <div class="tbl">
+    <div class="tbl rv">
       <table>
-        <thead><tr><th scope="col" style="width:22%"><span class="skip-sr" style="position:absolute;left:-9999px">Topic</span></th><th scope="col">Traditional automation tools</th><th scope="col" class="us">Calibra</th></tr></thead>
+        <thead><tr><th scope="col" style="width:22%"><span style="position:absolute;left:-9999px">Topic</span></th><th scope="col">Traditional automation tools</th><th scope="col" class="us">Calibra</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Building</th><td class="old">Drag modules and map every field by hand</td><td class="us">Describe the process and review the workflow Calibra builds</td></tr>
-          <tr><th scope="row">Testing</th><td class="old">Run it live and hope nothing goes wrong</td><td class="us">Simulate the whole workflow before it goes live</td></tr>
-          <tr><th scope="row">When something breaks</th><td class="old">Read the logs and work out the fix yourself</td><td class="us">A plain-words diagnosis and a proposed fix you approve</td></tr>
-          <tr><th scope="row">AI steps</th><td class="old">Use up your plan's tasks on top of the AI bill</td><td class="us">Your own AI key, no markup, plus cheaper-model suggestions</td></tr>
-          <tr><th scope="row">Logic and data steps</th><td class="old">Routers, filters and formatters count against your plan</td><td class="us">Logic, data, waits and approvals are free</td></tr>
-          <tr><th scope="row">Measuring</th><td class="old">A count of tasks executed</td><td class="us">Hours saved and net value per workflow</td></tr>
+          <tr><th scope="row">How you pay</th><td class="old">Every step counts against your plan, so bigger workflows cost more</td><td class="us">One credit per run, however many steps it has</td></tr>
+          <tr><th scope="row">Building</th><td class="old">Drag modules and map every field by hand</td><td class="us">Describe it or say it, then review the workflow Calibra builds</td></tr>
+          <tr><th scope="row">Testing</th><td class="old">Run it live and hope nothing goes wrong</td><td class="us">Full simulation, AI-written test cases and load tests</td></tr>
+          <tr><th scope="row">Switching tools</th><td class="old">Rebuild from scratch and cross your fingers</td><td class="us">Import with a compatibility report, then shadow mode on real events</td></tr>
+          <tr><th scope="row">When something breaks</th><td class="old">Read the logs and work out the fix yourself</td><td class="us">A plain-words diagnosis, a fix you approve and a retry from the failed step</td></tr>
+          <tr><th scope="row">Changing production</th><td class="old">Edit the live workflow directly</td><td class="us">Test environments, approvals, GitHub sync and version compare</td></tr>
+          <tr><th scope="row">AI</th><td class="old">AI steps add to your plan usage on top of the model bill</td><td class="us">AI included, or your own key with no markup and cheaper-model tips</td></tr>
+          <tr><th scope="row">Measuring</th><td class="old">A count of tasks executed</td><td class="us">Hours saved, net value and cost per client or department</td></tr>
         </tbody>
       </table>
     </div>
@@ -472,8 +776,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
       <h2 style="font-size:clamp(30px,3.4vw,44px)">Your tools, connected. Including the ones others skip.</h2>
       <p class="lead" style="font-size:17px">1,100+ ready-made apps, including local accounting, invoicing and HR tools. And if an app isn't there yet, you can still connect it.</p>
       <ul class="ul">
-        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>2,500+ public APIs ready to use, plus any API with an OpenAPI file</li>
-        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>AI agents that use any connector as a tool, and MCP servers</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>2,500+ public APIs ready to call, with the sign-in method detected for you</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>Import any OpenAPI or Swagger file and use its operations as steps</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>A searchable directory of 35,000+ MCP servers for your AI agents</li>
+        <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>No connector yet? Describe the API and the AI connector builder makes one</li>
         <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D8EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px"><polyline points="20 6 9 17 4 12"/></svg>Webhooks, HTTP requests and code steps when you need them</li>
       </ul>
       <a href="https://app.calibraautomation.com/sign-up" style="font-weight:600">See every integration in the app →</a>
@@ -501,12 +807,22 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
 
 <section class="section">
   <div class="wrap">
-    <h2 style="font-size:clamp(28px,3vw,38px);margin-bottom:40px;max-width:760px">Built in Europe for businesses that take their data seriously</h2>
+    <div class="split-head rv">
+      <div class="section-head" style="max-width:760px">
+        <span class="eyebrow iris">Security and privacy</span>
+        <h2>Built in Europe for businesses that take their data seriously.</h2>
+      </div>
+      <a class="btn btn-sec" href="https://app.calibraautomation.com/trust">Visit the trust center</a>
+    </div>
     <div class="g4">
-      <div class="card trust"><strong>EU data residency</strong><span>Workflows and run data are stored on servers in Frankfurt, Germany.</span></div>
-      <div class="card trust"><strong>No third-party tracking</strong><span>The app sends no telemetry to analytics providers. Your data is used to run your workflows, nothing else.</span></div>
-      <div class="card trust"><strong>Full history</strong><span>Every run, every step and every change is logged, with version history for each workflow.</span></div>
-      <div class="card trust"><strong>No lock-in</strong><span>Built on an open-source core. Export any workflow as a file whenever you want.</span></div>
+      <div class="card trust rv"><strong>EU data residency</strong><span>Workflows, files and backups live on servers in Frankfurt, Germany.</span></div>
+      <div class="card trust rv"><strong>Encrypted credentials</strong><span>Passwords, API keys and tokens in your connections are encrypted with AES-256 before they're stored.</span></div>
+      <div class="card trust rv"><strong>Retention you control</strong><span>Run data is kept 30 days by default. Admins can shorten it, or delete it right after every run.</span></div>
+      <div class="card trust rv"><strong>Roles and audit log</strong><span>Role-based access in every workspace and a log of the important actions taken in your account.</span></div>
+      <div class="card trust rv"><strong>No third-party tracking</strong><span>The app sends no telemetry to analytics providers. Your data runs your workflows, nothing else.</span></div>
+      <div class="card trust rv"><strong>Confidential runs</strong><span>Switch it on for a workflow and the content of each run is deleted shortly after it finishes.</span></div>
+      <div class="card trust rv"><strong>No lock-in</strong><span>Built on an open-source core, with an open flow format. Export any workflow whenever you want.</span></div>
+      <div class="card trust rv"><strong>A human answers</strong><span>Support from real people, with priority replies on higher plans. See our hours in the trust center.</span></div>
     </div>
   </div>
 </section>
@@ -536,7 +852,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
         <div class="price" data-m="$9" data-y="$90"><span class="amt">$9</span><small class="per"> / month</small></div>
         <div class="sub" data-m="Billed monthly, excl. taxes" data-y="$7.50 / month, billed yearly, excl. taxes">Billed monthly, excl. taxes</div>
         <p class="desc">For freelancers and small businesses automating for real.</p>
-        <ul><li>2,000 runs / month</li><li>Unlimited active workflows</li><li>1 user</li><li>Simulation, AI repair and value tracking</li></ul>
+        <ul><li>2,000 runs / month</li><li>Unlimited active workflows</li><li>1 user</li><li>Simulation, AI repair and value tracking</li><li>Shadow mode and migration import</li></ul>
         <a class="btn btn-sec" href="https://app.calibraautomation.com/sign-up">Choose Basic</a>
       </article>
       <article class="plan pop">
@@ -557,7 +873,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
       </article>
     </div>
     <div class="incl">
-      <span><strong>Every plan includes:</strong> 1,100+ apps · AI copilot · AI agents · MCP · HTTP and webhooks · templates</span>
+      <span><strong>Every plan includes:</strong> 1,100+ apps · AI copilot · AI agents · MCP · simulation · AI test cases · version history · HTTP and webhooks · templates</span>
       <span><strong>Need more runs?</strong> 2,000 extra for $6, by hand or with automatic top-up. They don't expire at the end of the month.</span>
     </div>
     <p class="note">A run counts once, however many steps it has. AI steps can use the AI included in Calibra or your own provider key, and with your own key you pay the model directly with no markup. Prices are in US dollars; customers in Europe can choose to pay in euros. Upgrade, downgrade or cancel at any time. Need more than 10,000 runs a month or 10 users? <a href="#contact">Talk to us</a>. Prefer to have it built for you? <a href="https://studio.calibraautomation.com/">Calibra Studio</a>.</p>
@@ -568,10 +884,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
   <div class="wrap">
     <h2 style="font-size:clamp(28px,3vw,38px);text-align:center;margin-bottom:28px">Questions</h2>
     <div class="faq">
-      <details open><summary>What counts as a credit?</summary><p>One credit for each step that works with an app or runs code, with a minimum of one per run. Routers, loops, branches and the logic and data tools (text, numbers, dates, data mapping, CSV, waits and approvals) are free.</p></details>
-      <details><summary>Do AI steps cost extra?</summary><p>AI steps, the copilot and AI agents use your own key from your AI provider, so you pay the model cost directly to them with no markup from us. Calibra also suggests cheaper models for steps that don't need an expensive one.</p></details>
-      <details><summary>Can I bring my workflows from another automation tool?</summary><p>Yes. Import them from the migration page and you get a compatibility report that shows which steps moved over and which ones need a look.</p></details>
-      <details><summary>Where is my data stored?</summary><p>On servers in Frankfurt, Germany, inside the European Union. Run data is kept for 30 days.</p></details>
+      <details open><summary>What counts as a credit?</summary><p>One credit is one workflow run, however many steps it has. A run with 3 steps and a run with 60 steps both use one credit. Only very long runs use more: one extra credit for every further 100 steps.</p></details>
+      <details><summary>Do AI steps cost extra?</summary><p>You choose. Use the AI included in Calibra, which is paid with credits, or connect your own provider key and pay the model directly with no markup from us. Either way, Calibra suggests cheaper models for steps that don't need an expensive one.</p></details>
+      <details><summary>Can I try Calibra without stopping my current tool?</summary><p>Yes. Import your workflows, then run them in shadow mode: Calibra processes the same live events while your current tool keeps working, and steps that send, write or charge return sample data so nothing is duplicated. Switch when the results match.</p></details>
+      <details><summary>Can AI agents spend money or send things on their own?</summary><p>Actions that move money, such as payments, refunds, payouts and transfers, never run from an AI assistant or agent. For anything else you can add an approval step, so the workflow waits for a person's OK.</p></details>
+      <details><summary>Can I white-label Calibra for my clients?</summary><p>Yes. Put your name, logo and colours on the app, give each client their own workspace with a credit budget, and install your solutions for new clients from private templates.</p></details>
+      <details><summary>Where is my data stored?</summary><p>On servers in Frankfurt, Germany, inside the European Union. Run data is kept for 30 days by default, and admins can shorten that or delete it right after each run.</p></details>
+      <details><summary>Which currency do you charge in?</summary><p>Prices are in US dollars. Customers in Europe can choose to pay in euros when they subscribe.</p></details>
       <details><summary>Do I need a card to start?</summary><p>No. The free plan is free forever and needs no card. You only add a payment method when you choose a paid plan, and you can cancel at any time.</p></details>
       <details><summary>Which languages does the app support?</summary><p>The app opens in English and can be switched to Spanish, German, French, Portuguese, Dutch, Japanese, Chinese and Arabic.</p></details>
     </div>
@@ -624,12 +943,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
       <a class="brand" href="/" aria-label="Calibra home"><img src="/marca/calibra-isotipo-gradient.svg" alt="" width="26" height="26"><img src="/marca/calibra-wordmark-light.svg" alt="calibra" width="78" height="20"></a>
       <span style="color:var(--muted);line-height:1.6">AI employees that run your processes end to end.</span>
     </div>
-    <div class="col"><h4>PRODUCT</h4><a href="#product">Features</a><a href="#templates">Templates</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a></div>
+    <div class="col"><h4>PRODUCT</h4><a href="#product">Features</a><a href="#switch">Switch without risk</a><a href="#teams">For teams</a><a href="#agencies">For agencies</a><a href="#templates">Templates</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a></div>
     <div class="col"><h4>GET STARTED</h4><a href="https://app.calibraautomation.com/sign-up">Create a free account</a><a href="https://app.calibraautomation.com/sign-in">Log in</a><a href="#contact">Contact</a><a href="https://studio.calibraautomation.com/">Done-for-you services</a><a href="/partners/">Partner program</a></div>
-    <div class="col"><h4>LEGAL</h4><a href="https://studio.calibraautomation.com/aviso-legal/">Legal notice</a><a href="https://app.calibraautomation.com/legal/privacidad">Privacy policy</a><a href="https://app.calibraautomation.com/legal/terminos">Terms of service</a><a href="mailto:info@calibraautomation.com">info@calibraautomation.com</a></div>
+    <div class="col"><h4>TRUST</h4><a href="https://app.calibraautomation.com/trust">Trust center</a><a href="https://app.calibraautomation.com/status">Service status</a><a href="https://studio.calibraautomation.com/aviso-legal/">Legal notice</a><a href="https://app.calibraautomation.com/legal/privacidad">Privacy policy</a><a href="https://app.calibraautomation.com/legal/terminos">Terms of service</a></div>
   </div>
   <div class="wrap legal"><span>© 2026 Calibra · Madrid, Spain</span><span>Servers in the EU · Frankfurt</span></div>
 </footer>
+
 
 <script>
 (function(){
@@ -771,6 +1091,41 @@ input:focus,select:focus,textarea:focus{outline:2px solid #8B6BFF;outline-offset
       .catch(function(){out.className='msg err';out.innerHTML='We couldn’t send it automatically. Please email us at <a href="mailto:info@calibraautomation.com">info@calibraautomation.com</a>.';})
       .then(function(){btn.disabled=false;btn.textContent=o;});
   });
+
+  /* per-run vs per-step calculator */
+  var rRuns=document.getElementById('r-runs'), rSteps=document.getElementById('r-steps');
+  if(rRuns&&rSteps){
+    var fmt=new Intl.NumberFormat('en-US');
+    var runsAt=function(v){var min=200,max=50000;var r=min*Math.pow(max/min,v/100);var step=r<1000?50:r<10000?250:1000;return Math.max(min,Math.round(r/step)*step);};
+    var planFor=function(runs){
+      if(runs<=200)return 'Fits the Free plan: $0, forever.';
+      if(runs<=2000)return 'Fits the Basic plan: $9 a month.';
+      if(runs<=5000)return 'Fits the Pro plan: $19 a month.';
+      if(runs<=10000)return 'Fits the Team plan: $35 a month.';
+      var packs=Math.ceil((runs-10000)/2000);
+      return 'Team plan plus '+packs+' extra pack'+(packs>1?'s':'')+' of 2,000 runs: $'+fmt.format(35+packs*6)+' a month.';
+    };
+    var paint=function(el){var p=(el.value-el.min)/(el.max-el.min)*100;el.style.setProperty('--p',p+'%');};
+    var calc=function(){
+      var runs=runsAt(+rRuns.value), steps=+rSteps.value, ops=runs*(steps-1>0?steps-1:1), x=ops/runs;
+      document.getElementById('o-runs').textContent=fmt.format(runs);
+      document.getElementById('o-steps').textContent=steps;
+      document.getElementById('c-old').textContent=fmt.format(ops)+' operations';
+      document.getElementById('c-us').textContent=fmt.format(runs)+' credits';
+      document.getElementById('t-us').style.width=Math.max(3,100/x)+'%';
+      document.getElementById('c-x').textContent=(Math.round(x*10)/10)+'×';
+      document.getElementById('c-plan').textContent=planFor(runs);
+      paint(rRuns);paint(rSteps);
+    };
+    rRuns.addEventListener('input',calc);rSteps.addEventListener('input',calc);calc();
+  }
+
+  /* reveal on scroll */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if(!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){io.observe(el);});
+  } else { rv.forEach(function(el){el.classList.add('on');}); }
 })();
 </script>
 <script src="/assets/affiliate-tracking.js" defer></script>
