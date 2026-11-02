@@ -9,6 +9,7 @@ const SRC = __dirname, OUT = path.join(SRC, 'dist');
 const DOMAIN = 'https://calibraautomation.com';
 const STUDIO = 'https://studio.calibraautomation.com';
 const TODAY = new Date().toISOString().slice(0, 10);
+const { buildDirectory } = require('./build-directory.js');
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync(path.join(SRC, 'producto'), OUT, { recursive: true });
@@ -65,9 +66,11 @@ fs.writeFileSync(path.join(OUT, '404.html'), `<!doctype html>
 </body></html>
 `);
 
+const directoryUrls = buildDirectory({ src: SRC, out: OUT });
+console.log(`directorio: ${directoryUrls.length} páginas`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${DOMAIN}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><priority>1.0</priority></url>\n</urlset>\n`);
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><priority>1.0</priority></url>\n  <url><loc>${DOMAIN}/partners/</loc><lastmod>${TODAY}</lastmod></url>\n${directoryUrls.map((u) => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(OUT, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Calibra</title><link>${STUDIO}/blog/</link><description>The Calibra blog has moved to ${STUDIO}/feed.xml</description></channel></rss>\n`);
 fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Calibra
 
